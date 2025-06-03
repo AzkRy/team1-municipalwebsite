@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page | Lucena</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../Navigation Bar/navigation.css">
+  <link rel="stylesheet" href="../Footer/footer_styles.css" />
+
+</head>
+<body>
+
+ <header>
+        <div id="divLogo">
+            <img src="../Navigation Bar/img/lucena_city.png" class="logo"> 
+            <h1 id="cityName"> CITY OF LUCENA </h1>
+        </div>
+        <div class="tagline">
+                <img src="../Navigation Bar/img/boom-lucena.PNG" class="boomLucena">
+        </div>
+    </header>
+
+        <div id="divNavigator">
+            <nav>
+                <ul class="sidebar" id="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><i class="fas fa-times"></i></a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="aboutpage.html">About Lucena</a></li>
+                    <li><a href="../News & Updates/news_updates.html">News & Updates</a></li>
+                    <li><a href="../Services/services.html">Services</a></li>
+                    <li><a href="../Contact Page/Contact Page.html">Contacts Us</a></li>
+                </ul>
+                <ul>
+                    <li class="hideOnDesktop" onclick=showSidebar()><a href="#"><i class="fas fa-bars"></i></a></li>
+                    <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="aboutpage.html">About Lucena</a></li>
+                    <li class="hideOnMobile"><a href="../News & Updates/news_updates.html">News & Updates</a></li>
+                    <li class="hideOnMobile"><a href="../Services/services.html">Services</a></li>
+                    <li class="hideOnMobile"><a href="../Contact Page/Contact Page.html">Contacts Us</a></li>
+                </ul>
+            </nav>
+
+            <div id="divSearch">
+                <input type="search" id="search" name="fname" value="" placeholder="Search...">  
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <script src="../Navigation Bar/navigation.js"></script>
+  <div class="page-titlecontainer">
+    <div class="page-title">
+      <h1>CITY OF LUCENA</h1>
+      <p class="breadcrumbs">
+        <a href="../index.html">Home</a> &gt;
+        <a href="aboutpage.html">About Page</a> &gt;
+        <span><a href="#">Brief Profile</a></span>
+      </p>
+      <h3>View <a href="aboutpage2.html">City Government</a></h3>
+    </div>
+  </div>
+
+<div class="history-wrapper">
+  <div class="history-image">
+    <img src="chall.png" alt="City Hall">
+  </div>
+  <div class="history-section">
+    <div class="history-text">
+      <h2>HISTORY</h2>
+	<hr size ="6px" color ="#F35B04">
+     <p>&ensp;&ensp;&ensp;Lucena was first as "Buenavista" which means beautiful scenic spots. Later, the name "Buenavista" was changed to Oroquieta" in honor of the Spanish Governor-general Oroquieta. the place was called "Cotta" meaning strong port. Pursuant to an "Orden Real Super Civil" promulgated on November 5, 1879 the name Lucena was given to the community as tribute to the late Reverend Mariano Granja, a Jesuit prelate of the town of Lucena, Province of Andalucia, Spain. Before Lucena became a municipality on June 23,1880, it was a barrio of the town of Tayabas, then the capital of the Province of the Tayabas (now Quezon Province).</p><br>
+    <p>&ensp;&ensp;&ensp;When the civil government was established in the Province of Tayabas on March 12,1901, Lucena was made the capital of the province.</p><br>
+    <p>&ensp;&ensp;&ensp;During WWII Lucena experience some grim realities of war in the hands of the Japanese military forces. Fortunately, the city was not devastated by the war.</p><br>
+    <p>&ensp;&ensp;&ensp;By virtue of Republic Act No. 3271 Lucena became a chartered city. Congressman Manuel S. Enverga of the first district of Quezon and Congressman Pascual Espinosa sponsored the bill creating the City of Lucena. It passed both houses of Congress on march 7, 1961.</p>
+    <p>&ensp;&ensp;&ensp;The city of Lucena was inagurated on August 19, 1962 on the occasion of the 84th Birth Anniversary of the late president Manuel L. Quezon</p><br>
+    <p>&ensp;&ensp;&ensp;Natural population growth and the tendency of the people to migrate in this place contributed to the event increasing population of the city. Today Lucena with approximately 278,924 people flourishes as a fast developing urban community.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="map-section" id="map-section">
+  <iframe
+    id="dynamic-map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113005.17575076818!2d121.58073468383056!3d13.920097799346596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4b578caf4ccd%3A0x2be1e905c862fe1!2sLucena%2C%204301%20Quezon!5e1!3m2!1sen!2sph!4v1748179858359!5m2!1sen!2sph"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<div class="tourist-section">
+  <h2>TOURIST ATTRACTIONS</h2>
+
+  <div class="attractions-container">
+    <div class="attraction-item">
+      <img src="park.png" alt="Lucena Perez Park">
+      <div class="caption-box" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1634.7651155786834!2d121.61227194884079!3d13.928256359339384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4b44422d08c5%3A0x1482b60eb68f69f8!2sLucena%20Perez%20Park!5e1!3m2!1sen!2sph!4v1748192114335!5m2!1sen!2sph">
+        Lucena Perez Park
+      </div>
+    </div>
+
+    <div class="attraction-item">
+      <img src="cathedral.png" alt="Saint Ferdinand Cathedral Parish">
+      <div class="caption-box" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9247.477933897875!2d121.61443566855858!3d13.931980874621868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4b5beb2054b5%3A0xadbb748070d256e7!2sSaint%20Ferdinand%20Cathedral%20Parish!5e1!3m2!1sen!2sph!4v1748195081888!5m2!1sen!2sph">
+        Saint Ferdinand Cathedral Parish
+      </div>
+    </div>
+
+    <div class="attraction-item">
+      <img src="fish.png" alt="Lucena Fish Port Complex">
+      <div class="caption-box" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9248.62504446491!2d121.62140291152338!3d13.90330126183265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4b2943d5bb0b%3A0x117d8582ca0b5acf!2sLucena%20Fish%20Port%20Complex!5e1!3m2!1sen!2sph!4v1748195257781!5m2!1sen!2sph">
+        Lucena Fish Port Complex
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const captions = document.querySelectorAll('.caption-box');
+  const mapIframe = document.getElementById('dynamic-map');
+
+  const defaultMapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166068.83025304167!2d121.54336610243867!3d13.946200121154792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4b578caf4ccd%3A0x2be1e905c862fe1!2sLucena%2C%204301%20Quezon!5e1!3m2!1sen!2sph!4v1748195369165!5m2!1sen!2sph";
+
+  let currentActive = null;
+
+  captions.forEach(caption => {
+    caption.addEventListener('click', () => {
+      const newMapSrc = caption.getAttribute('data-map');
+
+      if (currentActive === caption) {
+        mapIframe.src = defaultMapSrc;
+        currentActive = null;
+      } else {
+        mapIframe.src = newMapSrc;
+        currentActive = caption;
+      }
+
+      document.getElementById('map-section').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+<footer>
+        <div id="top_section">
+            <!-- Connect -->
+            <div id="connect">
+                <h3>CONNECT</h3>
+                <a href="https://www.facebook.com/LucenaPIO" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M29.9998 3.33337H24.9998C22.7897 3.33337 20.6701 4.21135 19.1073 5.77415C17.5445 7.33695 16.6665 9.45657 16.6665 11.6667V16.6667H11.6665V23.3334H16.6665V36.6667H23.3332V23.3334H28.3332L29.9998 16.6667H23.3332V11.6667C23.3332 11.2247 23.5088 10.8008 23.8213 10.4882C24.1339 10.1756 24.5578 10 24.9998 10H29.9998V3.33337Z"
+                            stroke="#F35B04" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a a href="mailto:CMOLucena@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M36.6668 9.99996C36.6668 8.16663 35.1668 6.66663 33.3335 6.66663H6.66683C4.8335 6.66663 3.3335 8.16663 3.3335 9.99996M36.6668 9.99996V30C36.6668 31.8333 35.1668 33.3333 33.3335 33.3333H6.66683C4.8335 33.3333 3.3335 31.8333 3.3335 30V9.99996M36.6668 9.99996L20.0002 21.6666L3.3335 9.99996"
+                            stroke="#F35B04" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+
+                <p><a href="https://maps.app.goo.gl/ADefFCns9dx3cb37A"> City Government <br> Complex 4301 Lucena, Philippines</a></p>
+                <p><a href="mailto:CMOLucenaCity@yahoo.com">CMOLucenaCity@yahoo.com</a></p>
+                <p><a href="mailto:CMOLucena@gmail.com">CMOLucena@gmail.com</a></p>
+                <p>
+                    <a href="tel:+63427882298">(042) 788-2298</a> <br>
+                    <a href="tel:+63427882320">(042) 788-2320 loc. 174</a>
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div id="qLinks">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="aboutpage.html">About Lucena</a></li>
+                    <li><a href="aboutpage2.html">City Government</a></li>
+                    <li><a href="../News & Updates/news_updates.html">News & Updates</a></li>
+                    <li><a href="../Services/services.html">Services</a></li>
+                    <li><a href="../Contact Page/Contact Page.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Government Links -->
+            <div id="gLinks">
+                <h3>Government Links</h3>
+                <ul>
+                    <li><a href="https://op-proper.gov.ph/">Office of the President</a></li>
+                    <li><a href="https://www.ovp.gov.ph/">Office of the Vice President</a></li>
+                    <li><a href="https://www.senate.gov.ph/">Senate of the Philippines</a></li>
+                    <li><a href="https://www.congress.gov.ph/">House of Representatives</a></li>
+                    <li><a href="https://sc.judiciary.gov.ph/">Supreme Court</a></li>
+                    <li><a href="https://ca.judiciary.gov.ph/">Court of Appeals</a></li>
+                    <li><a href="https://sb.judiciary.gov.ph/">Sandiganbayan</a></li>
+                </ul>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../Footer/phlogo.png" alt="Republika ng Pilipinas Logo" class="logo-img" />
+                <div class="logo-text">All the content is in the public domain unless otherwise stated.</div>
+            </div>
+        </div>
+
+        <div id="bottom_section">
+            Copyright &copy; 2025. All Rights Reserved | Team 1
+        </div>
+    </footer>
+</body>
+</html>
