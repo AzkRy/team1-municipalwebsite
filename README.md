@@ -1,6 +1,6 @@
 # Municipal Website Project
 
-A school group project about creating a municipal website, made by 5 students in compliance to our **Web Development** and **Human Computer** Interactions subjects.
+A school group project about creating a municipal website, made by 5 students in compliance to our **Web Development** and **Human Computer Interactions** subjects.
 It features the Home page, News & Updates, About page, Services, and the Contact page.
 
 ## Contributors
