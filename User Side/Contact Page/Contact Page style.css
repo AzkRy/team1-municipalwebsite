@@ -52,6 +52,7 @@ section {
     justify-content: center;
 }
 
+
 .container h1 {
     font-size: var(--H1-font-size);
     font-weight: 700;
@@ -100,7 +101,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
-    padding: 64px 102px;
+    padding: 56px 64px;
     box-shadow: none;
 }
 
@@ -162,7 +163,7 @@ section {
     align-items: center;
     text-align: center;
     box-shadow: 0px 4px 4px 5px rgba(32, 23, 41, 0.25);
-    padding: 30px 10px;
+    padding: 30px 30px;
     margin-left: 32px;
     margin-top: 20px;
     border-radius: var(--border-radius); 
@@ -177,7 +178,8 @@ section {
     width: 90%;
 }
 
-.name-email {
+.name-type {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -185,8 +187,8 @@ section {
     width: 100%;
 }
 
-.name-email input {
-    width: 48%;
+.name-type input {
+    
     height: 40px;
     padding: 10px 10px;
     border: 1px solid var(--accent-color);
@@ -195,17 +197,36 @@ section {
     font-family: var(--text-font);
 }
 
-.name-email input:first-child {
+.name-type select {
+    color: var(--section-color);
+    width: 48%;
+    height: 40px;
+    padding: 10px 10px;
+    border: none;
+    background: var(--icon-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    font-size: var(--text-font-size);
+    font-family: var(--text-font);
+}
+
+.name-type option {
+    color: var(--text-color);
+    background-color: var(--section-color);
+}
+
+.name-type input:first-child {
+    width: 48%;
     margin-right: 8px;
 }
 
-.subject {
+.subject  {
     width: 100%;
     height: 40px;
     padding: 10px 10px;
     border: 1px solid var(--accent-color);
     border-radius: var(--border-radius);
-    margin-top: 16px;
+    margin-top: 12px;
     margin-bottom: 16px;
     font-size: var(--text-font-size);
     font-family: var(--text-font);
@@ -223,7 +244,8 @@ section {
 }
 
 .contact_form button {
-    width: 40%;
+    margin-left: 25%;
+    width: 50%;
     height: 40px;
     background-color: var(--section-color);
     color: var(--button-color);
@@ -353,6 +375,7 @@ section {
         font-size: var(--H2-font-size);
         margin-bottom: 20px;
     }
+    
 }
 
 @media (max-width: 412px) { 
@@ -415,16 +438,20 @@ section {
        
     }
 
-    .name-email {
+    .name-type {
         flex-wrap: wrap;
         flex-direction: row;
     }
-   .name-email input:first-child {
+   .name-type input:first-child {
         margin-right: 0px;
         margin-bottom: 8px;
     }
 
-    .name-email input {
+    .name-type input {
+        width: 100%;
+        font-size: 12px;
+    }
+    .name-type select {
         width: 100%;
         font-size: 12px;
     }
@@ -518,17 +545,21 @@ section {
         margin-bottom: 20px;
     }
 
-    .name-email {
+    .name-type {
         flex-wrap: wrap;
         flex-direction: row;
     }
 
-    .name-email input:first-child {
+    .name-type input:first-child {
         margin-right: 0px;
         margin-bottom: 8px;
     }
 
-    .name-email input {
+    .name-type input {
+        width: 100%;
+        font-size: 12px;
+    }
+    .name-type select {
         width: 100%;
         font-size: 12px;
     }

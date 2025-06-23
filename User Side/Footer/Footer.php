@@ -32,12 +32,12 @@
             <div id="qLinks">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../About Page/aboutpage.html">About Lucena</a></li>
-                    <li><a href="../About Page/aboutpage2.html">City Government</a></li>
-                    <li><a href="../News & Updates/news_updates.html">News & Updates</a></li>
-                    <li><a href="../Services/services.html">Services</a></li>
-                    <li><a href="../Contact Page/Contact Page.html">Contact Us</a></li>
+                    <li><a href="../Home/index.php">Home</a></li>
+                    <li><a href="../About Page/about.php">About Lucena</a></li>
+                    <li><a href="../About Page/about.php">City Government</a></li>
+                    <li><a href="../News & Updates/News Page.php">News & Updates</a></li>
+                    <li><a href="../Services/services.php">Services</a></li>
+                    <li><a href="../Contact Page/Contact Page.php">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -57,7 +57,7 @@
 
             <!-- Logo -->
             <div class="logo-container">
-                <img src="../Footer/phlogo.png" alt="Republika ng Pilipinas Logo" class="logo-img" />
+                <img src="../Img/phlogo.png" alt="Republika ng Pilipinas Logo" class="logo-img" />
                 <div class="logo-text">All the content is in the public domain unless otherwise stated.</div>
             </div>
         </div>

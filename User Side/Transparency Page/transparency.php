@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
-    <link rel="stylesheet" href="transparency_styles.css">
+    <link rel="stylesheet" href="../Transparency Page/transparency_styles.css">
     <link rel="stylesheet" href="../Navigation Bar/navigation.css">
     <link rel="stylesheet" href="../Footer/footer_styles.css">
 
@@ -27,14 +27,14 @@
     </header>
 
     <?php
-    include 'navigation.php';
+    include '../Navigation Bar/Navigation.php';
     ?>
 
     <section class="headline_section">
         <h1>PAGE TRANSPARENCY</h1>
         <br>
         <div class="navigation_link">
-            <a href="#" class="home_link">Home</a> > <a class="news-link" href="#">Page Transparency</a>
+            <a href="../Home/index.php" class="home_link">Home</a> > <a class="news-link" href="../Transparency Page/transparency.php">Page Transparency</a>
         </div>
     </section>
 
@@ -70,5 +70,5 @@
 
     <script src="../Navigation Bar/navigation.js"></script>
     <?php
-    include 'Footer.php';
+    include '../Footer/Footer.php';
     ?>

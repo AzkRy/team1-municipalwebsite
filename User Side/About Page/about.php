@@ -35,13 +35,13 @@
         <h1>CITY OF LUCENA</h1>
         <br>
         <div class="navigation_link">
-            <a href="#" class="home_link">Home</a> > <a class="news-link" href="#">About Lucena</a>
+            <a href="../Home/index.php" class="home_link">Home</a> > <a class="news-link" href="../About Page/about.php">About Lucena</a>
         </div>
     </section>
 
     <section class="history">
         <div class="history-text">
-            <img src="capitol.png">
+            <img src="../Tourism Page/capitol.png" alt="Capitol Building">
             <div class="text-content">
                 <h1>HISTORY</h1>
                 <hr>

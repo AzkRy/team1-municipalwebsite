@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="../Services/services.css">
+    
     <link rel="stylesheet" href="../Navigation Bar/navigation.css">
     <link rel="stylesheet" href="../Footer/footer_styles.css">
 </head>
@@ -34,7 +35,7 @@ include '../Navigation Bar/Navigation.php';
         <div class="sub-header">
             <h1>SERVICES</h1>
             <p class="breadcrumbs">
-                <a href="../index.html">Home</a> &gt; <span><a href="services.html">Services</a></span>
+                <a href="../Home/index.html">Home</a> &gt; <span><a href="../Services/services.php">Services</a></span>
             </p>
         </div>
     </div>
@@ -42,19 +43,19 @@ include '../Navigation Bar/Navigation.php';
     <div class="container">
         <div class="card">
             <img class="image-placeholder" src="../Services/img/permitsimg.jpg">
-            <a href="../Services/permit.html"><h2>Permit Applications</h2></a>
+            <a href="../Services/permit.php"><h2>Permit Applications</h2></a>
             <p>Submit requests for building, event, business, and transport permits quickly and easily.</p>
         </div>
 
         <div class="card">
             <img class="image-placeholder" src="../Services/img/healthservicesimg.jpg">
-            <a href="../Services/healthservice.html"><h2>Health Appointments</h2></a>
+            <a href="../Services/healthservice.php"><h2>Health Appointments</h2></a>
             <p>Schedule a medical consultation or request healthcare services with our local clinics.</p>
         </div>
 
         <div class="card">
             <img class="image-placeholder" src="../Services/img/taxservicesimg.jpg">
-            <a href="../Services/taxservice.html"><h2>Tax Clearance Requests</h2></a>
+            <a href="../Services/taxservice.php"><h2>Tax Clearance Requests</h2></a>
             <p>Apply for official tax clearance for business, property, or financial transactions.</p>
         </div>
     </div>

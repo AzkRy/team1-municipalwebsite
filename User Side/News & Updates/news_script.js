@@ -79,27 +79,27 @@ loadMoreBtn.addEventListener("click", (e) => {
 
 const announcements = [
   {
-    img: "../anc1.jpg",
+    img: "../Img/anc1.jpg",
     title: "",
     content: ""
   },
   {
-    img: "../anc2.jpg",
+    img: "..../Img/anc2.jpg",
     title: "",
     content: ""
   },
   {
-    img: "../anc3.jpg",
+    img: "..../Img/anc3.jpg",
     title: "",
     content: ""
   },
   {
-    img: "../anc4.jpg",
+    img: "../Img/anc4.jpg",
     title: "",
     content: ""
   },
   {
-    img: "../anc5.jpg",
+    img: "../Img/anc5.jpg",
     title: "",
     content: ""
   }

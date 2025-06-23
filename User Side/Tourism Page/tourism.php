@@ -12,18 +12,18 @@
 
     <link rel="stylesheet" href="../Navigation Bar/navigation.css">
     <link rel="stylesheet" href="../Footer/footer_styles.css">
-    <script type="text/javascript" src="tourism.js"></script>
+    <script type="text/javascript" src="../Tourism Page/tourism.js"></script>
 
 </head>
 
 <body>
     <header>
         <div id="divLogo">
-            <img src="img/lucena_city.png" class="logo">
+            <img src="../Navigation Bar/img/lucena_city.png" class="logo">
             <h1 id="cityName"> CITY OF LUCENA </h1>
         </div>
         <div class="tagline">
-            <img src="img/boom-lucena.PNG" class="boomLucena">
+            <img src="../Navigation Bar/img/boom-lucena.PNG" class="boomLucena">
         </div>
     </header>
 
@@ -35,7 +35,7 @@
         <h1>TOURISM</h1>
         <br>
         <div class="navigation_link">
-            <a href="#" class="home_link">Home</a> > <a class="news-link" href="#">Tourism</a>
+            <a href="../Home/index.php" class="home_link">Home</a> > <a class="news-link" href="../Tourism Page/tourism.php">Tourism</a>
         </div>
     </section>
 

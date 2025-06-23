@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="Contact Page style.css">
+    <link rel="stylesheet" href="../Contact Page/Contact Page style.css">
     <link rel="stylesheet" href="../Navigation Bar/navigation.css">
     <link rel="stylesheet" href="../Footer/footer_styles.css">
 
@@ -31,7 +31,7 @@ include '../Navigation Bar/Navigation.php';
         <div class="container">
             <h1>CONTACT US</h1>
             <p class="message">We value your Feedback and Inquiries. Please fill out the form below to get in touch.</p>
-            <a href="../index.html" class="home-link">Home</a> <span>&gt;</span> <a class="contact-link" href="../Contact Page/Contact Page.html">Contact Us</a>
+            <a href="../Home/index.php" class="home-link">Home</a> <span>&gt;</span> <a class="contact-link" href="../Contact Page/Contact Page.php">Contact Us</a>
         </div>   
     </section>
     <section class="contacts_section">

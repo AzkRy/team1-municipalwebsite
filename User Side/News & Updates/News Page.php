@@ -7,9 +7,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="Navigation Bar/navigation.css">
-    <link rel="stylesheet" href="news_styles.css">
-    <link rel="stylesheet" href="Footer/footer_styles.css">
+    <link rel="stylesheet" href="../News & Updates/news_styles.css">
+    
+    <link rel="stylesheet" href="../Navigation Bar/navigation.css">
+    <link rel="stylesheet" href="../Footer/footer_styles.css">
 
 </head>
 <body>
@@ -23,14 +24,14 @@
         </div>
     </header>
 
-<?php
-include 'navigation.php';
-?>
+    <?php
+    include '../Navigation Bar/Navigation.php';
+    ?>
 
 <section class="headline_section">
     <div class="headline_content">
         <div class="navigation_links">
-            <a href="#" class="home_link">Home</a> > <a class="news-link" href="#">News & Updates</a>
+            <a href="../Home/index.php" class="home_link">Home</a> > <a class="news-link" href="../News & Updates/News Page.php">News & Updates</a>
         </div>
         <h1>2025 PHALGA <p>Excellence Award</p>
         </h1>
@@ -48,7 +49,7 @@ include 'navigation.php';
         <hr>
         <div id="news_container">
             <article class="news-article">
-                <img src="img/news1.jpg" alt="news1">
+                <img src="../Img/news1.jpg" alt="news1">
                 <div class="news-content">
                     <h3 class="news-title">
                         <span class="title-text">Lucena West 1 shines in Jakarta! </span>
@@ -60,7 +61,7 @@ include 'navigation.php';
                 </div>
             </article>
             <article class="news-article">
-                <img src="img/news2.jpg" alt="news2">
+                <img src="../Img/news2.jpg" alt="news2">
                 <div class="news-content">
                     <h3 class="news-title">
                         <span class="title-text">Bb. Pasayahan 2025</span>
@@ -73,7 +74,7 @@ include 'navigation.php';
                 </div>
             </article>
             <article class="news-article">
-                <img src="img/news3.jpg" alt="news3">
+                <img src="../Img/news3.png" alt="news3">
                 <div class="news-content">
                     <h3 class="news-title">
                         <span class="title-text">Tagumpay ng Quezonian</span>
@@ -86,7 +87,7 @@ include 'navigation.php';
                 </div>
             </article>
             <article class="news-article">
-                <img src="img/news4.jpg" alt="news4">
+                <img src="../Img/news4.jpg" alt="news4">
                 <div class="news-content">
                     <h3 class="news-title">
                         <span class="title-text">Summer Job Fair</span>
@@ -100,7 +101,7 @@ include 'navigation.php';
             </article>
 
             <article class="news-article">
-                <img src="img/news5.jpg" alt="news3">
+                <img src="../Img/news5.jpg" alt="news3">
                 <div class="news-content">
                     <h3 class="news-title">
                         <span class="title-text">Veterinary Medical Mission</span>
@@ -118,7 +119,7 @@ include 'navigation.php';
             </article>
 
             <article class="news-article">
-                <img src="img/news6.jpg" alt="news1">
+                <img src="../Img/news6.jpg" alt="news1">
                 <div class="news-content">
                     <h3 class="news-title">
                         <span class="title-text">OPLAN BAKLAS</span>
@@ -220,8 +221,8 @@ include 'navigation.php';
 </div>
 
 <script src="news_script.js"></script>
-<script src="Navigation Bar/navigation.js"></script>
+<script src="../Navigation Bar/navigation.js"></script>
 
-<?php
-include 'Footer/Footer.php';
-?>
+    <?php
+    include '../Footer/Footer.php';
+    ?>
