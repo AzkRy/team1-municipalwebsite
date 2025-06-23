@@ -189,8 +189,10 @@
             </div>
         </div>        
     </div>
+        
     <script src="home.js"></script>
-    
+    <script src="Navigation Bar/navigation.js"></script>
+
     <?php 
     include '../Footer/Footer.php';
     ?> 
