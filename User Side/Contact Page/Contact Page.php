@@ -1,3 +1,21 @@
+<?php
+include '../database/database.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $type = $_POST['type'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    // Use prepared statements to prevent SQL injection
+    $stmt = $conn->prepare("INSERT INTO feedback_inquiries (name, type, subject, message) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $name, $type, $subject, $message);
+    $stmt->execute();
+    $stmt->close();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,14 +102,15 @@ include '../Navigation Bar/Navigation.php';
                 <form action="Contact Page.php" method="post">
 
                     <div class="name-type">
-                        <input class="name" type="text" placeholder="Name">
-                        <select  name="type" placeholder="Select Type" required>
-                            <option value="Select Type">Select Type</option>
+                        <input class="name" type="text" name="name" placeholder="Name*" required>
+                        <select name="type" required>
+                            <option value="">Select Type</option>
                             <option value="Feedback">Feedback</option>
-                            <option value="Inquiry">Inquiry</option><br>
+                            <option value="Inquiry">Inquiry</option>
+                        </select>
                     </div>
-                    <input class="subject" type="text" placeholder="Subject*" required> <br>
-                    <textarea placeholder="Write your message*..." required></textarea> <br>
+                    <input class="subject" type="text" name="subject" placeholder="Subject*" required> <br>
+                    <textarea name="message" placeholder="Write your message*..." required></textarea> <br>
                     <button type="submit" name="submit">Send Message</button>
                 </form>
             </div>
@@ -102,4 +121,4 @@ include '../Navigation Bar/Navigation.php';
 
     <?php 
     include '../Footer/Footer.php';
-    ?> 
+    ?>

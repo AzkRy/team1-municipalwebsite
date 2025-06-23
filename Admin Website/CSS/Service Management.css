@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #F6F6F6;
+    --section-color: #FCF7F8;
+    --accent-color: #006494;
+    --sub-color: #F35B04;
+    --important-section: #9A031E;
+    --button-color: #201729;
+    --text-color: #000000;
+    --footer-bg: #D9D9D9;
+    --icon-color: #F35B04;
+    --box-shadow: 0px 4px 4px 0px rgba(32, 23, 41, 0.25);
+    --Main-font: 'Roboto', sans-serif;
+    --text-font: 'Archivo', sans-serif;
+    --border-radius: 4px;
+    --H1-font-size: 64px;
+    --H2-font-size: 32px;
+    --Title-font-size: 24px;
+    --text-font-size: 16px;
+    --icon-size: 24px;
+    --button-font-size: 18px;
+}
+
+body {
+    font-family: var(--Main-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-tab {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  max-width: 1000px;
+  background-color: var(--section-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-top: 40px;
+}
+
+.tabs-nav {
+  display: flex;
+  gap: 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+  padding: 8px 10px;
+  background-color: var(--section-color);
+  color: var(--button-color);
+  font-family: var(--Main-font);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--sub-color);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: var(--sub-color);
+  color: var(--section-color);
+}
+
+.tab-button.active {
+  background-color: var(--sub-color);
+  color: var(--section-color);
+  font-weight: 700;
+}
+
+.tabs-content {
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 18px;
+    margin: 25px 0 30px 0;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--Main-font);
+}
+
+.permit-card {
+    width: 200px;
+    height: 100px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--section-color);
+    box-shadow: var(--box-shadow);
+    transition: all 0.2s ease-in-out;
+}
+
+.permit-card:hover {
+    transform: scale(1.05);
+}
+
+.permit-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.permit-card-count {
+    font-family: var(--text-font);
+    font-size: var(--H2-font-size);
+    font-weight: bold;
+}
+
+.permit-card.approved {
+    background: #27ae60;
+}
+
+.permit-card.pending {
+    background: #f39c12;
+}
+
+.permit-card.rejected {
+    background: #c0392b;
+}
+
+.permit-card.total {
+    background: #2980b9;
+}
+
+.permit-table-section {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    background: var(--section-color);
+    margin: 18px 0 0 0;
+}
+
+
+.permit-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+    background: var(--section-color);
+    padding: 10px 18px 8px 18px;
+    border-radius: 4px 4px 0 0;
+}
+
+.permit-table-title {
+    font-family: var(--Main-font);
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.permit-table-controls {
+    font-family: var(--text-font);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.permit-table-controls select {
+    font-family: var(--text-font);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: var(--border-radius);  
+}
+
+th, td {
+    border: 1px solid var(--accent-color);
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--accent-color);
+    font-size: var(--text-font-size);
+}
+
+th {
+    font-family: var(--Main-font);
+    background-color: #fff;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+
+td {
+    font-family: var(--text-font);
+    font-size: 16px;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+td select {
+    width: 100px;
+    background: var(--section-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+}
+
+td option {
+    background: var(--section-color);
+    color: var(--button-color);
+}
+
+td button {
+    background: var(--button-color);
+    width: 100px;
+    height: 24px;
+    font-size: var(--text-font-size);
+    font-family: var(--text-font);
+    color: var(--section-color);
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+td button:hover {
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow);
+}
+
+
