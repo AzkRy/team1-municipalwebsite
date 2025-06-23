@@ -10,3 +10,7 @@ function switchSection(button, sectionId) {
 
     document.getElementById(sectionId).classList.remove('hidden');
 }
+
+function updateMap(newSrc) {
+    document.getElementById('mapFrame').src = newSrc;
+  }
