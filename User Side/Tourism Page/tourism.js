@@ -1,3 +1,16 @@
+function setActive(button, content) {
+  // Remove 'active' from all buttons
+  const buttons = document.querySelectorAll('.nav-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  // Add 'active' to the clicked button
+  button.classList.add('active');
+
+  // Change content of the box
+  const contentBox = document.getElementById('contentBox');
+  contentBox.textContent = content;
+}
+
 function updateSpot(button, spot) {
     // Change active button style
     const buttons = document.querySelectorAll('.spot-btn');
