@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucena Health Appointment | Services</title>
-    <link rel="stylesheet" href="healthservice.css" />
+    <title>Lucena Tax Clearance | Services</title>
+    <link rel="stylesheet" href="taxservice.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Roboto:wght@500;600;700;800&display=swap"
       rel="stylesheet"
@@ -82,17 +82,17 @@
 
       <ol>
         <li>Step 1: Fill up form</li>
-        <li>Step 2: Select type of service</li>
-        <li>Step 3: Note down the location shown</li>
+        <li>Step 2: Provide needed files</li>
+        <li>Step 3: Submit the form</li>
         <li>Step 4: Confirm if details are correct</li>
-        <li>Step 5: Wait for updates for the appointment</li>
+        <li>Step 5: Wait for approval</li>
       </ol>
     </div>
 
-    <!--HEALTH FORM-->
-    <form id="appointmentForm" action="confirmation.html" class="permit-form">
-      <h2 class="form-title">Health Appointment Request</h2>
-      <!-- Personal Info -->
+    <!--TAX FORM-->
+    <form id="taxForm" class="permit-form">
+      <h2 class="form-title">Tax Clearance Request Form</h2>
+
       <div class="form-grid">
         <div class="form-group">
           <label for="last-name">Last Name</label>
@@ -147,21 +147,6 @@
         </div>
 
         <div class="form-group">
-          <label>Sex</label>
-          <label
-            ><input type="radio" name="sex" value="male" required /> Male</label
-          >
-          <label
-            ><input type="radio" name="sex" value="female" required />
-            Female</label
-          >
-          <label
-            ><input type="radio" name="sex" value="other" required /> Prefer not
-            to say</label
-          >
-        </div>
-
-        <div class="form-group">
           <label for="email-address">Email</label>
           <input
             type="email"
@@ -177,106 +162,193 @@
         </div>
       </div>
 
-      <!-- Appointment Info -->
-      <h4>APPOINTMENT DETAILS</h4>
+      <h4>Taxpayer Details</h4>
       <div class="form-grid">
         <div class="form-group">
-          <label for="appointment-date">Preferred Appointment Date</label>
-          <input
-            type="date"
-            id="appointment-date"
-            name="appointment-date"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="appointment-time">Appointment Time</label>
-          <select id="appointment-time" name="appointment-time" required>
-            <option value="">Select a time</option>
+          <label for="tax-type">Type of Tax Clearance</label>
+          <select id="tax-type" required>
+            <option value="">-- Please select --</option>
+            <option value="Real Property">Real Property</option>
+            <option value="Business">Business</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="service-type">Type of Service</label>
-          <select id="service-type">
-            <option value="">-- Select --</option>
-            <option value="general">General Checkup</option>
-            <option value="dental">Dental</option>
-            <option value="prenatal">Prenatal</option>
-            <option value="pediatrics">Pediatrics</option>
-            <option value="mental">Mental</option>
-          </select>
-          <div
-            id="service-note"
-            style="margin-top: 10px; font-size: 14px; color: #333"
-          ></div>
-        </div>
-        <div class="form-group full-width">
-          <label for="reason">Reason for Appointment</label>
-          <textarea id="reason" name="reason" rows="4" required></textarea>
-        </div>
-      </div>
 
-      <!-- Health Info -->
-      <h4>HEALTH DETAILS</h4>
-      <div class="form-grid">
-        <div class="form-group full-width">
-          <label for="medical-history">Medical History</label>
-          <textarea
-            id="medical-history"
-            name="medical-history"
-            rows="3"
-            required
-          ></textarea>
-        </div>
-        <div class="form-group full-width">
-          <label for="allergies">Allergies</label>
-          <textarea id="allergies" name="allergies" rows="2"></textarea>
-        </div>
-      </div>
-
-      <!-- Emergency Contact -->
-      <h4>EMERGENCY CONTACT</h4>
-      <div class="form-grid">
         <div class="form-group">
-          <label for="emergency-name">Name</label>
+          <label for="tax-id">Taxpayer Identification Number (TIN)</label>
           <input
             type="text"
-            id="emergency-name"
-            name="emergency-name"
+            id="tax-id"
             required
-            pattern="^[A-Za-zÑñ\s\-']+$"
+            pattern="^\d{9}$"
+            maxlength="9"
+            placeholder="9-digit TIN"
           />
         </div>
+
         <div class="form-group">
-          <label for="emergency-contact">Contact Number</label>
+          <label for="registered-name">Registered Taxpayer Name</label>
           <input
-            type="tel"
-            id="emergency-contact"
-            name="emergency-contact"
+            type="text"
+            id="registered-name"
             required
-            pattern="^[0-9]{11}$"
-            maxlength="11"
+            placeholder="As listed in BIR or City records"
           />
+        </div>
+
+        <div class="form-group">
+          <label for="business-name">Business Name (if applicable)</label>
+          <input
+            type="text"
+            id="business-name"
+            placeholder="Leave blank if not applicable"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="tax-address">Property/Business Address</label>
+          <input
+            type="text"
+            id="tax-address"
+            required
+            placeholder="Full address of the business or property"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="barangay">Barangay</label>
+          <input type="text" id="barangay" name="barangay" pattern="^[A-Za-zÑñ0-9\s\-']+$" required />
+        </div>
+
+        <div class="form-group">
+          <label for="is-taxpayer">Are you the taxpayer?</label>
+          <select id="is-taxpayer" required>
+            <option value="">-- Select --</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <div class="form-group hidden" id="relationship-group">
+          <label for="relationship">Relationship to Taxpayer</label>
+          <input
+            type="text"
+            id="relationship"
+            placeholder="e.g. Family Member, Employee, Administrator"
+          />
+        </div>
+
+        <div class="form-group hidden" id="auth-upload-group">
+          <label>Upload Authorization Letter / Document</label>
+          <div class="custom-upload">
+            <input
+              type="file"
+              name="authorization-letter"
+              id="authorization-letter"
+              class="file-hidden"
+              accept=".pdf,.jpg,.png"
+            />
+            <label for="authorization-letter" class="file-button"
+              >Upload File</label
+            >
+            <span class="file-name">No file selected</span>
+          </div>
         </div>
       </div>
 
-      <!-- File Upload -->
-      <h4>ATTACHMENTS</h4>
-      <div class="form-group">
-        <label>Relevant Medical Records</label>
-        <div class="custom-upload">
+      <h4>Request Details</h4>
+      <div class="form-grid">
+        <!-- Purpose -->
+        <div class="form-group full-width">
+          <label for="purpose">Purpose of Request</label>
+          <textarea
+            id="purpose"
+            rows="3"
+            required
+            placeholder="e.g. Business Permit Renewal, Loan Application, Land Title Transfer"
+          ></textarea>
+        </div>
+
+        <!-- Tax Year(s) Covered -->
+        <div class="form-group">
+          <label for="years-covered">Tax Year(s) Covered</label>
           <input
-            type="file"
-            name="relevant-med-records"
-            id="relevant-med-records"
-            class="file-hidden"
-            accept=".pdf,.jpg,.png"
+            type="text"
+            id="years-covered"
+            placeholder="e.g. 2022, 2023"
+            required
+            pattern="^\d{4}(,\s*\d{4})*$"
+            title="Enter one or more years, separated by commas (e.g. 2023, 2024)"
           />
-          <label for="relevant-med-records" class="file-button">Upload File</label>
-          <span class="file-name">No file selected</span>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="additional-notes">Additional Notes (Optional)</label>
+          <textarea
+            id="additional-notes"
+            rows="2"
+            placeholder="e.g. Requested on behalf of deceased taxpayer, etc."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Upload Valid Government ID</label>
+          <div class="custom-upload">
+            <input
+              type="file"
+              name="valid-id"
+              id="valid-id"
+              class="file-hidden"
+              accept=".pdf,.jpg,.jpeg,.png"
+              required
+            />
+            <label for="valid-id" class="file-button">Upload File</label>
+            <span class="file-name">No file selected</span>
+          </div>
+        </div>
+
+        <!-- Optional Proof of Payment -->
+        <div class="form-group">
+          <label>Upload Proof of Payment (Optional)</label>
+          <div class="custom-upload">
+            <input
+              type="file"
+              name="proof-of-pay"
+              id="proof-of-pay"
+              class="file-hidden"
+              accept=".pdf,.jpg,.jpeg,.png"
+            />
+            <label for="proof-of-pay" class="file-button">Upload File</label>
+            <span class="file-name">No file selected</span>
+          </div>
         </div>
       </div>
-        <button type="submit" class="submit-btn">Submit Request</button>
+
+      <h4>Delivery & Submission</h4>
+      <div class="form-grid">
+        <!-- Contact Info -->
+        <div class="form-group">
+          <label for="contact">Contact Email or Phone</label>
+          <input
+            type="text"
+            id="contact"
+            required
+            placeholder="e.g. 09123456789 or your@email.com"
+            pattern="^(09|\+639)\d{9}$|^[^\s@]+@[^\s@]+\.[^\s@]+$"
+            title="Enter a valid PH mobile number or email address"
+          />
+        </div>
+
+        <!-- Delivery Method -->
+        <div class="form-group">
+          <label for="delivery">Delivery Method</label>
+          <select id="delivery" required>
+            <option value="">-- Choose delivery option --</option>
+            <option value="Pickup at Office">Pickup at Office</option>
+            <option value="Email">Send via Email</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">Submit Request</button>
     </form>
 
     <footer>
@@ -403,6 +475,6 @@
       </div>
     </footer>
 
-    <script src="healthservice.js" defer></script>
+    <script src="taxservice.js" defer></script>
   </body>
 </html>

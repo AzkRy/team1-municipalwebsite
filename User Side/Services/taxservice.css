@@ -441,6 +441,10 @@ textarea {
   resize: vertical;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Hide actual file input */
 .file-hidden {
   display: none;
