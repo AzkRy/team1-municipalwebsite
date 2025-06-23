@@ -4,8 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> City of Lucena </title>
-        <link rel="stylesheet" href="home styles.css"> 
+        <link rel="stylesheet" href="home styles.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="../Navigation Bar/navigation.css">
+        <link rel="stylesheet" href="../Footer/footer_styles.css">
     </head>
+
+    <?php
+    include '../Navigation Bar/Navigation.php';
+    ?>
 
     <body>        
         <div class="main-carousel-container">
@@ -182,6 +190,7 @@
         </div>        
     </div>
     <script src="home.js"></script>
-
-    </body>
-</html>
+    
+    <?php 
+    include '../Footer/Footer.php';
+    ?> 
