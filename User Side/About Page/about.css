@@ -126,7 +126,7 @@
 }
 
   .history-text h1 {
-    font-size: var(--H1-font-size);
+    font-size: var(--H2-font-size);
     color: var(--sub-color);
     margin: 0;
     text-align: center;
@@ -194,7 +194,7 @@
   .vision h1 {
    margin-top: 10px;
    margin-bottom: 20px;
-   font-size: var(--H1-font-size);
+   font-size: var(--H2-font-size);
    color: var(--accent-color);
    text-align: center;
 }
@@ -203,7 +203,7 @@
    margin-top: 10px;
    margin-bottom: 20px;
    color: var(--accent-color);
-   font-size: var(--H1-font-size);
+   font-size: var(--H2-font-size);
    text-align: center;
 }
 
@@ -269,7 +269,7 @@
 
   .section h1 {
     margin: 0;
-    font-size: var(--H1-font-size);
+    font-size: var(--H2-font-size);
     text-align: center;
 }
 
