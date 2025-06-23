@@ -42,3 +42,10 @@ const carouselSlide = document.querySelector('.carousel-slide');
             slideWidth = slides[0].offsetWidth;
             carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
         });
+        overlayButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        }); 
+
+        
