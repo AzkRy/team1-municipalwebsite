@@ -126,7 +126,7 @@ $canEditMedia = $isSuperAdmin || $isMediaOfficer;
       <div id="headlineGallery" style="display: none;">
 
         <div class="headline_section">
-          <img class="headline-img" src="img/headline.jpg" alt="Headline Image">
+          <img class="headline-img" src="User Side/Img/headline.jpg" alt="Headline Image">
           <div class="headline_content">
             <div class="headline-header">
               <h3 class="news-title">
