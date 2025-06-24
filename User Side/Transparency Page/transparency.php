@@ -16,59 +16,59 @@
 </head>
 
 <body>
-    <header>
-        <div id="divLogo">
-            <img src="../Navigation Bar/img/lucena_city.png" class="logo">
-            <h1 id="cityName"> CITY OF LUCENA </h1>
-        </div>
-        <div class="tagline">
-            <img src="../Navigation Bar/img/boom-lucena.PNG" class="boomLucena">
-        </div>
-    </header>
+  <header>
+    <div id="divLogo">
+      <img src="../Navigation Bar/img/lucena_city.png" class="logo">
+      <h1 id="cityName"> CITY OF LUCENA </h1>
+    </div>
+    <div class="tagline">
+      <img src="../Navigation Bar/img/boom-lucena.PNG" class="boomLucena">
+    </div>
+  </header>
 
-    <?php
-    include '../Navigation Bar/Navigation.php';
-    ?>
+  <?php
+  include 'navigation.php';
+  ?>
 
-    <section class="headline_section">
-        <h1>PAGE TRANSPARENCY</h1>
-        <br>
-        <div class="navigation_link">
+  <section class="headline_section">
+    <h1>PAGE TRANSPARENCY</h1>
+    <br>
+    <div class="navigation_link">
             <a href="../Home/index.php" class="home_link">Home</a> > <a class="news-link" href="../Transparency Page/transparency.php">Page Transparency</a>
         </div>
+  </section>
+
+  <div class="bottom_section">
+    <section class="trans_nav">
+      <table>
+        <thead>
+          <tr>
+            <th>Navigation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="../Files/2022 Annual Report.pdf" target="pdf_viewer">2022 Annual Audit Report</a></td>
+          </tr>
+          <tr>
+            <td><a href="../Files/PMR June 2023.pdf" target="pdf_viewer">Procurement Monitoring Report 2023</a></td>
+          </tr>
+          <tr>
+            <td><a href="../Files/PMR June 2024.pdf" target="pdf_viewer">Procurement Monitoring Report 2024<</a></td>
+          </tr>
+          <tr>
+            <td><a href="../Files/PMR June 2025.pdf" target="pdf_viewer">Procurement Monitoring Report 2025</a></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <div class="bottom_section">
-        <section class="trans_nav">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Navigation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="Team 1 - Figma Design (Municipal Website).pdf" target="pdf_viewer">Annual Report 2024</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="sample2.pdf" target="pdf_viewer">Budget Breakdown</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="sample3.pdf" target="pdf_viewer">Transparency Policy</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="sample4.pdf" target="pdf_viewer">Audit Summary</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <section class="document_area">
+      <iframe name="pdf_viewer" src="sample1.pdf" width="100%" height="600px" style="border: none;"></iframe>
+    </section>
+  </div>
 
-        <section class="document_area">
-            <iframe name="pdf_viewer" src="sample1.pdf" width="100%" height="600px" style="border: none;"></iframe>
-        </section>
-    </div>
-
-    <script src="../Navigation Bar/navigation.js"></script>
+   <script src="../Navigation Bar/navigation.js"></script>
     <?php
     include '../Footer/Footer.php';
     ?>
