@@ -1,7 +1,16 @@
 <?php 
+session_start();
 include '../User Side/database/database.php';
 
-// Fetch users from the database
+if (!isset($_SESSION['um_id']) || !isset($_SESSION['role'])) {
+    header("Location: ../Admin Website/Log In.php");
+    exit();
+}
+
+$isSuperAdmin = ($_SESSION['role'] === 'Super Admin');
+$isUserAdmin = ($_SESSION['role'] === 'User Admin');
+$canEditMedia = $isSuperAdmin || $isUserAdmin;
+
 $sql = "SELECT role, last_name, first_name, email, employee_num, password FROM user_management";
 $result = $conn->query($sql);
 ?>
@@ -16,12 +25,16 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="../Admin Website/CSS/User Management.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../Admin Website/CSS/Navigation Bar.css">
 </head>
 <body>
+    <?php include '../Admin Website/Navigation Bar.php'; ?>
     <section>
         <div class="upper-part">
             <h2>USER MANAGEMENT</h2>
-            <button id="openUser" onclick=openUser()><i class="fas fa-plus"></i></button>
+            <?php if ($isSuperAdmin): ?>
+                <button id="openUser" onclick="openUser()"><i class="fas fa-plus"></i></button>
+            <?php endif; ?>
         </div>
         <table>
             <thead>
@@ -31,7 +44,9 @@ $result = $conn->query($sql);
                 <th>Email</th>
                 <th>Employee Number</th>
                 <th>Password</th>
-                <th>Edit</th>
+                <?php if ($isSuperAdmin): ?>
+                    <th>Edit</th>
+                <?php endif; ?>
             </thead>
             <tbody>
                 <?php if ($result && $result->num_rows > 0): ?>
@@ -43,22 +58,25 @@ $result = $conn->query($sql);
                             <td><?php echo htmlspecialchars($row['email']); ?></td>
                             <td><?php echo htmlspecialchars($row['employee_num']); ?></td>
                             <td><?php echo str_repeat('•', 8); ?></td>
-                            <td>
-                                <button id="openEdit" onclick="openEdit()"><i class="fas fa-edit"></i></button>
-                                <button id="delete" onclick="openDelete()"><i class="fas fa-trash-alt"></i></button>
-                            </td>
+                            <?php if ($isSuperAdmin): ?>
+                                <td>
+                                    <button id="openEdit" onclick="openEdit()"><i class="fas fa-edit"></i></button>
+                                    <button id="delete" onclick="openDelete()"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            <?php endif; ?>
                         </tr>
                     <?php endwhile; ?>
                 <?php else: ?>
                     <tr>
-                        <td colspan="7">No users found.</td>
+                        <td colspan="<?php echo $isSuperAdmin ? '7' : '6'; ?>">No users found.</td>
                     </tr>
                 <?php endif; ?>
             </tbody>
         </table>
     </section>
 
-    <!--==================== ADD USER MODAL =====================-->
+    <?php if ($canEditMedia): ?>
+        <!--==================== ADD USER MODAL =====================-->
         <div class="modal-container" id="modal_Container">
             <div class="modal-user">
                 <h2>Register User</h2>
@@ -141,6 +159,7 @@ $result = $conn->query($sql);
                     </div>
                 </form>
             </div>
+    <?php endif; ?>
 
     <script src="../Admin Website/JavaScripts/User Management.js"></script>
 </body>

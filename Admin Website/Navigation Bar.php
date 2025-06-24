@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation</title>
 
-    <link rel="stylesheet" href="./CSS/Navigation Bar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-</head>
-<body>
     <header>
         <nav>
             <div class="topBar">
@@ -33,7 +22,7 @@
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <div class="city-logo">
-                <img src="lucena_city.png" alt="Lucena City Logo">
+                <img src="../User Side/Navigation Bar/img/lucena_city.png" alt="Lucena City Logo">
             </div>
             <div class="city-name">
                 <p>LUCENA CITY</p>
@@ -43,11 +32,11 @@
 
         <div class="sidebar-content">
             <nav class="nav-menu">
-                <a href="#" class="nav-item active" data-page="home">
+                <a href="#" class="nav-item" data-page="media">
                     <span>Home</span>
                 </a>
 
-                <a href="#" class="nav-item" data-page="media">
+                <a href="../Admin Website/Media Management.php" class="nav-item" data-page="media">
                     <span>Media Management</span>
                 </a>
 
@@ -55,16 +44,20 @@
                     <span>City Information</span>
                 </a>
 
-                <a href="#" class="nav-item" data-page="services">
+                <a href="../Admin Website/Service Management.php" class="nav-item" data-page="services">
                     <span>Service Management</span>
                 </a>
 
-                <a href="#" class="nav-item" data-page="transparency">
+                <a href="../Admin Website/Transparency Posting.php" class="nav-item" data-page="transparency">
                     <span>Transparency Posting</span>
                 </a>
 
-                <a href="#" class="nav-item" data-page="feedback">
+                <a href="../Admin Website/Feedback_Inquiry.php" class="nav-item" data-page="feedback">
                     <span>Feedback & Inquiry</span>
+                </a>
+
+                <a href="../Admin Website/User Management.php" class="nav-item" data-page="feedback">
+                    <span>User Management</span>
                 </a>
             </nav>
 
@@ -76,10 +69,8 @@
         </div>
 
         <div class="collapsed-logo">
-            <img src="lucena_city.png" alt="Lucena City Logo">
+            <img src="../User Side/Navigation Bar/img/lucena_city.png" alt="Lucena City Logo">
         </div>
     </aside>
 
-    <script src="./JavaScripts/Navigation Bar.js"></script>
-</body>
-</html>
+    <script src="../Admin Website/JavaScripts/Navigation Bar.js"></script>

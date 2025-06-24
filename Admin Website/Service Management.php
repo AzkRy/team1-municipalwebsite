@@ -1,3 +1,17 @@
+<?php 
+include '../User Side/database/database.php';
+session_start();
+
+if (!isset($_SESSION['um_id']) || !isset($_SESSION['role'])) {
+    header("Location: ../Admin Website/Log In.php");
+    exit();
+}
+
+$isSuperAdmin = ($_SESSION['role'] === 'Super Admin');
+$isServiceOfficer = ($_SESSION['role'] === 'Service Officer');
+$canEditMedia = $isSuperAdmin || $isServiceOfficer;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +19,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services Management</title>
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../Admin Website/CSS/Service Management.css">
+    <link rel="stylesheet" href="../Admin Website/CSS/Navigation Bar.css">
 </head>
 <body>
+    <?php include '../Admin Website/Navigation Bar.php'; ?>
+    
     <div class="filter-tab">
         <div class="tabs-nav">
             <div class="tab-button active" onclick="showTab('permits', this)">PERMITS</div>
@@ -66,11 +83,15 @@
                         <td>Juan</td>
                         <td>Seib Mor</td>
                         <td>
+                            <?php if ($canEditMedia): ?>
                             <select name="status" id="status">
                                 <option value="Pending">Pending</option>
                                 <option value="Approved">Approved</option>
                                 <option value="Rejected">Rejected</option>
                             </select>
+                            <?php else: ?>
+                            <span>Pending</span>
+                            <?php endif; ?>
                         </td>
                         <td>
                             <button id="viewForm" class="view-form">View Form</button>
@@ -84,11 +105,15 @@
                         <td>Jose</td>
                         <td>Marie Mor</td>
                         <td>
+                            <?php if ($canEditMedia): ?>
                             <select name="status" id="status">
                                 <option value="Pending">Pending</option>
                                 <option value="Approved">Approved</option>
                                 <option value="Rejected">Rejected</option>
                             </select>
+                            <?php else: ?>
+                            <span>Pending</span>
+                            <?php endif; ?>
                         </td>
                         <td>
                             <button id="viewForm" class="view-form">View Form</button>
@@ -102,11 +127,15 @@
                         <td>Del</td>
                         <td>Monte</td>
                         <td>
+                            <?php if ($canEditMedia): ?>
                             <select name="status" id="status">
                                 <option value="Pending">Pending</option>
                                 <option value="Approved">Approved</option>
                                 <option value="Rejected">Rejected</option>
                             </select>
+                            <?php else: ?>
+                            <span>Pending</span>
+                            <?php endif; ?>
                         </td>
                         <td>
                             <button id="viewForm" class="view-form">View Form</button>
@@ -120,11 +149,15 @@
                         <td>Dell</td>
                         <td>Hp</td>
                         <td>
+                            <?php if ($canEditMedia): ?>
                             <select name="status" id="status">
                                 <option value="Pending">Pending</option>
                                 <option value="Approved">Approved</option>
                                 <option value="Rejected">Rejected</option>
                             </select>
+                            <?php else: ?>
+                            <span>Pending</span>
+                            <?php endif; ?>
                         </td>
                         <td>
                             <button id="viewForm" class="view-form">View Form</button>
@@ -184,11 +217,15 @@
                             <td>Juan</td>
                             <td>Seib Mor</td>
                             <td>
+                                <?php if ($canEditMedia): ?>
                                 <select name="status" id="status">
                                     <option value="Pending">Pending</option>
                                     <option value="Approved">Approved</option>
                                     <option value="Rejected">Rejected</option>
                                 </select>
+                                <?php else: ?>
+                                <span>Pending</span>
+                                <?php endif; ?>
                             </td>
                             <td>
                                 <button id="viewForm" class="view-form">View Form</button>
@@ -202,11 +239,15 @@
                             <td>Jose</td>
                             <td>Marie Mor</td>
                             <td>
+                                <?php if ($canEditMedia): ?>
                                 <select name="status" id="status">
                                     <option value="Pending">Pending</option>
                                     <option value="Approved">Approved</option>
                                     <option value="Rejected">Rejected</option>
                                 </select>
+                                <?php else: ?>
+                                <span>Pending</span>
+                                <?php endif; ?>
                             </td>
                             <td>
                                 <button id="viewForm" class="view-form">View Form</button>
@@ -220,11 +261,15 @@
                             <td>Del</td>
                             <td>Monte</td>
                             <td>
+                                <?php if ($canEditMedia): ?>
                                 <select name="status" id="status">
                                     <option value="Pending">Pending</option>
                                     <option value="Approved">Approved</option>
                                     <option value="Rejected">Rejected</option>
                                 </select>
+                                <?php else: ?>
+                                <span>Pending</span>
+                                <?php endif; ?>
                             </td>
                             <td>
                                 <button id="viewForm" class="view-form">View Form</button>
@@ -238,11 +283,15 @@
                             <td>Dell</td>
                             <td>Hp</td>
                             <td>
+                                <?php if ($canEditMedia): ?>
                                 <select name="status" id="status">
                                     <option value="Pending">Pending</option>
                                     <option value="Approved">Approved</option>
                                     <option value="Rejected">Rejected</option>
                                 </select>
+                                <?php else: ?>
+                                <span>Pending</span>
+                                <?php endif; ?>
                             </td>
                             <td>
                                 <button id="viewForm" class="view-form">View Form</button>
@@ -253,8 +302,6 @@
             </div>
         </div>
     </div>
-
-    
 
         <script src="../Admin Website/JavaScripts/Service Management.js"></script>
     </body>

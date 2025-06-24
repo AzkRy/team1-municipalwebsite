@@ -1,3 +1,17 @@
+<?php 
+include '../User Side/database/database.php';
+session_start();
+
+if (!isset($_SESSION['um_id']) || !isset($_SESSION['role'])) {
+    header("Location: ../Admin Website/Log In.php");
+    exit();
+}
+
+$isSuperAdmin = ($_SESSION['role'] === 'Super Admin');
+$isMediaOfficer = ($_SESSION['role'] === 'Media Officer');
+$canEditMedia = $isSuperAdmin || $isMediaOfficer;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,98 +20,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Media Management</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="Media Management.css">
+  <link rel="stylesheet" href="../Admin Website/CSS/Media Management.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <link rel="stylesheet" href="../Admin Website/CSS/Navigation Bar.css">
 </head>
 
 <body>
+  <?php include '../Admin Website/Navigation Bar.php'; ?>
   <div class="container">
     
     <section class="form_area">
       <h2>MEDIA CONTENT UPLOAD</h2>
+      <?php if ($canEditMedia): ?>
+        <select id="formToggle">
+          <option value="" disabled selected hidden>Media Content Type</option>
+          <option value="headline_form">Headline News</option>
+          <option value="latest_form">Latest News</option>
+          <option value="event_form">Events</option>
+          <option value="announcement_form">Announcements</option>
+        </select>
 
-      <select id="formToggle">
-        <option value="" disabled selected hidden>Media Content Type</option>
-        <option value="headline_form">Headline News</option>
-        <option value="latest_form">Latest News</option>
-        <option value="event_form">Events</option>
-        <option value="announcement_form">Announcements</option>
-      </select>
+        <div class="form-container">
+          <div class="form-box" id="headline_form_box">
+            <form id="headline_form">
+              <label for="headline_image">Attach News Image</label>
+              <input type="file" id="headline_image" accept=".jpg, .jpeg, .png" required>
 
-      <div class="form-container">
-        <div class="form-box" id="headline_form_box">
-          <form id="headline_form">
-            <label for="headline_image">Attach News Image</label>
-            <input type="file" id="headline_image" accept=".jpg, .jpeg, .png" required>
+              <label for="headline_title">News Title</label>
+              <input type="text" id="headline_title" required>
 
-            <label for="headline_title">News Title</label>
-            <input type="text" id="headline_title" required>
+              <label for="headline_date">Date</label>
+              <div class="calendar-wrapper">
+                <input type="text" id="headline_date" class="flat-calendar" placeholder="mm-dd-yyyy" required>
+              </div>
 
-            <label for="headline_date">Date</label>
-            <div class="calendar-wrapper">
-              <input type="text" id="headline_date" class="flat-calendar" placeholder="mm-dd-yyyy" required>
-            </div>
+              <label for="headline_link">Source Link</label>
+              <input type="url" id="headline_link" required>
 
-            <label for="headline_link">Source Link</label>
-            <input type="url" id="headline_link" required>
+              <label for="headline_description">News Description</label>
+              <textarea id="headline_description" required></textarea>
+              <?php if ($canEditMedia): ?>
+              <button type="submit" class="upload_button">Upload</button>
+              <?php endif; ?>
+            </form>
+          </div>
 
-            <label for="headline_description">News Description</label>
-            <textarea id="headline_description" required></textarea>
+          <div class="form-box" id="latest_form_box">
+            <form id="latest_form">
+              <label for="latest_image">Attach News Image</label>
+              <input type="file" id="latest_image" accept=".jpg, .jpeg, .png" required>
 
-            <button type="submit" class="upload_button">Upload</button>
-          </form>
+              <label for="latest_title">News Title</label>
+              <input type="text" id="latest_title" required>
+
+              <label for="latest_date">Date</label>
+              <div class="calendar-wrapper">
+                <input type="text" id="latest_date" class="flat-calendar" placeholder="mm-dd-yyyy" required>
+              </div>
+
+              <label for="latest_link">Source Link</label>
+              <input type="url" id="latest_link" required>
+
+              <label for="latest_description">News Description</label>
+              <textarea id="latest_description" required></textarea>
+
+              <button type="submit" class="upload_button">Upload</button>
+            </form>
+          </div>
+
+          <div class="form-box" id="event_form_box">
+            <form id="event_form">
+              <label for="event_date">Date</label>
+              <div class="calendar-wrapper">
+                <input type="text" id="event_date" class="flat-calendar" placeholder="mm-dd-yyyy" required>
+              </div>
+
+              <label for="event_title">Event Name</label>
+              <input type="text" id="event_title" required>
+
+              <button type="submit" class="upload_button">Upload</button>
+            </form>
+          </div>
+
+          <div class="form-box" id="announcement_form_box">
+            <form id="announcement_form">
+              <label for="announcement_image">Attach Announcement Image</label>
+              <input type="file" id="announcement_image" accept=".jpg, .jpeg, .png" required>
+
+              <label for="announcement_link">Source Link</label>
+              <input type="url" id="announcement_link" required>
+
+              <button type="submit" class="upload_button">Upload</button>
+            </form>
+          </div>
         </div>
-
-        <div class="form-box" id="latest_form_box">
-          <form id="latest_form">
-            <label for="latest_image">Attach News Image</label>
-            <input type="file" id="latest_image" accept=".jpg, .jpeg, .png" required>
-
-            <label for="latest_title">News Title</label>
-            <input type="text" id="latest_title" required>
-
-            <label for="latest_date">Date</label>
-            <div class="calendar-wrapper">
-              <input type="text" id="latest_date" class="flat-calendar" placeholder="mm-dd-yyyy" required>
-            </div>
-
-            <label for="latest_link">Source Link</label>
-            <input type="url" id="latest_link" required>
-
-            <label for="latest_description">News Description</label>
-            <textarea id="latest_description" required></textarea>
-
-            <button type="submit" class="upload_button">Upload</button>
-          </form>
-        </div>
-
-        <div class="form-box" id="event_form_box">
-          <form id="event_form">
-            <label for="event_date">Date</label>
-            <div class="calendar-wrapper">
-              <input type="text" id="event_date" class="flat-calendar" placeholder="mm-dd-yyyy" required>
-            </div>
-
-            <label for="event_title">Event Name</label>
-            <input type="text" id="event_title" required>
-
-            <button type="submit" class="upload_button">Upload</button>
-          </form>
-        </div>
-
-        <div class="form-box" id="announcement_form_box">
-          <form id="announcement_form">
-            <label for="announcement_image">Attach Announcement Image</label>
-            <input type="file" id="announcement_image" accept=".jpg, .jpeg, .png" required>
-
-            <label for="announcement_link">Source Link</label>
-            <input type="url" id="announcement_link" required>
-
-            <button type="submit" class="upload_button">Upload</button>
-          </form>
-        </div>
-      </div>
+      <?php endif; ?>
     </section>
 
     <section class="media_gallery" id="media_gallery">
@@ -112,7 +132,9 @@
                 <span class="title-text">News Title</span>
                 <span class="date">2025-06-20</span>
               </h3>
-              <button class="edit-btn" aria-label="Edit News">&#9998;</button>
+              <?php if ($canEditMedia): ?>
+                <button class="edit-btn" aria-label="Edit News">&#9998;</button>
+              <?php endif; ?>
             </div>
             <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
             <a class="readmore_link" href="#" target="_blank">Source Link</a>
@@ -132,7 +154,9 @@
               <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <a href="#" class="readmore_link">Read more</a>
             </div>
-            <button class="delete-btn" data-type="latest" aria-label="Delete News">&times;</button>
+            <?php if ($canEditMedia): ?>
+              <button class="delete-btn" data-type="latest" aria-label="Delete News">&times;</button>
+            <?php endif; ?>  
           </article>
         </div>
       </div>
@@ -166,7 +190,9 @@
           <div class="events_schedule">
             <span class="event-title">SMB NIGHT</span>
             <span class="event-date">| May 29–31</span>
-            <button class="delete-btn" data-type="event" aria-label="Delete Event">&times;</button>
+            <?php if ($canEditMedia): ?>
+              <button class="delete-btn" data-type="latest" aria-label="Delete News">&times;</button>
+            <?php endif; ?>
           </div>
         </div>
       </div>
@@ -188,6 +214,7 @@
   </div>
 </div>
 
+<?php if ($canEditMedia): ?>
 <!-- Modal for Event -->
 <div class="modal-container-delete" id="modal_event" onclick="outsideClick(event)" style="display: none;">
   <div class="modal-delete" onclick="event.stopPropagation()">
@@ -215,10 +242,11 @@
     </form>
   </div>
 </div>
+<?php endif; ?>
 
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="Media Management.js"></script>
+<script src="../Admin Website/JavaScripts/Media Management.js"></script>
 
 </html>

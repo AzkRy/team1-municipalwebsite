@@ -1,3 +1,23 @@
+<?php 
+include '../User Side/database/database.php';
+session_start();
+
+if (!isset($_SESSION['um_id']) || !isset($_SESSION['role'])) {
+    header("Location: ../Admin Website/Log In.php");
+    exit();
+}
+
+$isSuperAdmin = ($_SESSION['role'] === 'Super Admin');
+$isFeedbackOfficer = ($_SESSION['role'] === 'Feedback Officer');
+$canEditMedia = $isSuperAdmin || $isFeedbackOfficer;
+
+if (!$canEditMedia) {
+    // Optionally, you can show a message or redirect
+    echo "<h2 style='color:red; text-align:center; margin-top:50px;'>Access Denied: You do not have permission to view this page.</h2>";
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +27,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../Admin Website/CSS/Feedback_Inquiry.css">
-
+    <link rel="stylesheet" href="../Admin Website/CSS/Navigation Bar.css">
 </head>
 <body>
+    <?php include '../Admin Website/Navigation Bar.php'; ?>
     <section>
         <div class="top-part">
             <div class="card-container">
@@ -41,37 +62,51 @@
                 <div class="feedback-item">
                     <span class="feedback-user">Anonymous</span>
                     <span class="feedback-message">Ganda ng gov site, Talaga!</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Juan</span>
                     <span class="feedback-message">Tama na.</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Juan</span>
                     <span class="feedback-message">Ou,Tama na.</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Juan</span>
                     <span class="feedback-message">Legit, Tama na.</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Maria</span>
                     <span class="feedback-message">napapagod na ko.</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Jose</span>
                     <span class="feedback-message">Feedback message #sleep.</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Jose</span>
                     <span class="feedback-message">Feedback message #sleep.</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -93,37 +128,51 @@
                 <div class="feedback-item">
                     <span class="feedback-user">Anonymous</span>
                     <span class="feedback-message">Pano ba to?</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Juan</span>
                     <span class="feedback-message">Sheeshable san nakikita yun</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Jose</span>
                     <span class="feedback-message">Inquiry Message</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Mae</span>
                     <span class="feedback-message">Inquiry Message</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Maria</span>
                     <span class="feedback-message">napapagod na ko.</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Jose</span>
                     <span class="feedback-message">Inquiry message.</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
                 <div class="feedback-item">
                     <span class="feedback-user">Jose</span>
                     <span class="feedback-message">Ano ang sleep?</span>
-                    <button class="delete-btn" id="deleteFeedback" onclick=openDelete()><i class="fas fa-trash"></i></button>
+                    <?php if ($canEditMedia): ?>
+                    <button class="delete-btn" id="deleteFeedback" onclick="openDelete()"><i class="fas fa-trash"></i></button>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
