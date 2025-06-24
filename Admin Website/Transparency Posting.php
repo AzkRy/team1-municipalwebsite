@@ -53,27 +53,27 @@ $canEditMedia = $isSuperAdmin || $isTransparencyOfficer;
             <h2>DOCUMENTS</h2>
             <div class="document-scroll-wrapper">
                 <div class="document_area">
-                    <a class="document_title" href="../Admin Website/Files/2022 Annual Report.pdf" target="_blank" style="color: black; text-decoration: underline;">2022 Annual Audit Report</a>
+                    <a class="document_title" href="../User Side/Files/2022 Annual Report.pdf" target="_blank" style="color: black; text-decoration: underline;">2022 Annual Audit Report</a>
                     <?php if ($canEditMedia): ?>
                     <button class="edit-btn">&#9998;</button>
                     <button class="delete-btn" data-type="announcement">&times;</button>
                     <?php endif; ?>
                 </div>
                 <div class="document_area">
-                    <a class="document_title" href="../Admin Website/Files/PMR June 2023.pdf" target="_blank" style="color: black; text-decoration: underline;">Procurement Monitoring Report 2023</a>
+                    <a class="document_title" href="../User Side/Files/PMR June 2023.pdf" target="_blank" style="color: black; text-decoration: underline;">Procurement Monitoring Report 2023</a>
                    <?php if ($canEditMedia): ?>
                     <button class="edit-btn">&#9998;</button>
                     <button class="delete-btn" data-type="announcement">&times;</button>
                     <?php endif; ?>
                 </div>
                 <div class="document_area">
-                    <a class="document_title" href="../Admin Website/Files/PMR June 2024.pdf" target="_blank" style="color: black; text-decoration: underline;">Procurement Monitoring Report 2024</a>
+                    <a class="document_title" href="../User Side/Files/PMR June 2024.pdf" target="_blank" style="color: black; text-decoration: underline;">Procurement Monitoring Report 2024</a>
                     <?php if ($canEditMedia): ?>
                     <button class="edit-btn">&#9998;</button>
                     <button class="delete-btn" data-type="announcement">&times;</button>
                     <?php endif; ?>
                 <div class="document_area">
-                    <a class="document_title" href="../Admin Website/Files/PMR June 2025.pdf" target="_blank" style="color: black; text-decoration: underline;">Procurement Monitoring Report 2025</a>
+                    <a class="document_title" href="../User Side/Files/PMR June 2025.pdf" target="_blank" style="color: black; text-decoration: underline;">Procurement Monitoring Report 2025</a>
                     <?php if ($canEditMedia): ?>
                     <button class="edit-btn">&#9998;</button>
                     <button class="delete-btn" data-type="announcement">&times;</button>
