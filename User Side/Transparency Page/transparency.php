@@ -48,7 +48,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="Files/2022 Annual Report.pdfpdf" target="pdf_viewer">2022 Annual Audit Report</a></td>
+                        <td><a href="Files/2022 Annual Report.pdf" target="pdf_viewer">2022 Annual Audit Report</a></td>
                     </tr>
                     <tr>
                         <td><a href="Files/PMR June 2023.pdf" target="pdf_viewer">Procurement Monitoring Report 2023</a></td>
