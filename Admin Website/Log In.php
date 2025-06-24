@@ -2,6 +2,8 @@
 include '../User Side/database/database.php';
 session_start();
 
+$error = ""; // Initialize error variable
+
 if (isset($_POST['first_name'], $_POST['last_name'], $_POST['employee_num'], $_POST['password'])) {
     $first_name = trim($_POST['first_name']);
     $last_name = trim($_POST['last_name']);
@@ -19,13 +21,15 @@ if (isset($_POST['first_name'], $_POST['last_name'], $_POST['employee_num'], $_P
         if (password_verify($password, $user['password'])) {
             $_SESSION['um_id'] = $user['um_id'];
             $_SESSION['role'] = $user['role'];
+            $_SESSION['first_name'] = $user['first_name'];
+            $_SESSION['last_name'] = $user['last_name'];
             header("Location: Media Management.php");
             exit();
         } else {
-            echo "Invalid password. Please try again.";
+            $error = "Invalid password. Please try again.";
         }
     } else {
-        echo "Invalid credentials. Please try again.";
+        $error = "Invalid credentials. Please try again.";
     }
 
     $stmt->close();
@@ -55,6 +59,9 @@ if (isset($_POST['first_name'], $_POST['last_name'], $_POST['employee_num'], $_P
                     margin-bottom: 25px;  width: 60%; margin: 20px auto; text-align: center; font-family: Roboto, sans-serif;'>$error</div>"; ?>
                 <p class="login-text">Log In</p>
                 <form action="" method="POST">
+                    <?php if (!empty($error)): ?>
+        <div class="error-message"><?php echo $error; ?></div>
+    <?php endif; ?>
                 <div class="input-group">
                     <input type="text" id="last_name" name="last_name" placeholder="Last Name" value="<?php echo (isset($last_name)) ? $last_name : ''; ?>" required>
                     <input type="text" id="first_name" name="first_name" placeholder="First Name" value="<?php echo (isset($first_name)) ? $first_name : ''; ?>" required>

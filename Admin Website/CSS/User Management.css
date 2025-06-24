@@ -140,7 +140,7 @@ td i:nth-child(1):hover {
     color: var(--icon-color);
 }
 
-#delete:last-child i{
+.openDeleteBtn i {
     margin-left: 8px;
     color: var(--important-section);
 }

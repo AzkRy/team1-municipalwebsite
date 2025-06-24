@@ -195,3 +195,16 @@ form {
     text-transform: uppercase;
     font-weight: 600;
 }
+
+.error-message {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}

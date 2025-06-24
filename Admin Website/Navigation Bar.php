@@ -12,7 +12,15 @@
 
                 <div class="right-section">
                     <div class="user-profile">
-                        <span>ADMIN Name</span> <i class="fas fa-user-circle"></i>
+                        <span>
+                            <?php
+                                if (isset($_SESSION['last_name']) && isset($_SESSION['first_name'])) {
+                                     echo htmlspecialchars($_SESSION['last_name'] . ', ' . $_SESSION['first_name']);
+                                } else {
+                                    echo "ADMIN Name";
+                                }
+                            ?>
+                                </span> <i class="fas fa-user-circle"></i>
                     </div>
                 </div>
             </div>
