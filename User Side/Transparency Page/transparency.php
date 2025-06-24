@@ -48,16 +48,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="Files/2022 Annual Report.pdf" target="pdf_viewer">2022 Annual Audit Report</a></td>
+                        <td><a href=".../Files/2022 Annual Report.pdf" target="pdf_viewer">2022 Annual Audit Report</a></td>
                     </tr>
                     <tr>
-                        <td><a href="Files/PMR June 2023.pdf" target="pdf_viewer">Procurement Monitoring Report 2023</a></td>
+                        <td><a href=".../Files/PMR June 2023.pdf" target="pdf_viewer">Procurement Monitoring Report 2023</a></td>
                     </tr>
                     <tr>
-                        <td><a href="Files/PMR June 2024.pdf" target="pdf_viewer">Procurement Monitoring Report 2024<</a></td>
+                        <td><a href=".../Files/PMR June 2024.pdf" target="pdf_viewer">Procurement Monitoring Report 2024<</a></td>
                     </tr>
                     <tr>
-                        <td><a href="Files/PMR June 2025.pdf" target="pdf_viewer">Procurement Monitoring Report 2025</a></td>
+                        <td><a href=".../Files/PMR June 2025.pdf" target="pdf_viewer">Procurement Monitoring Report 2025</a></td>
                     </tr>
                 </tbody>
             </table>
