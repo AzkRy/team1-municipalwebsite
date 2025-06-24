@@ -48,16 +48,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="Team 1 - Figma Design (Municipal Website).pdf" target="pdf_viewer">Annual Report 2024</a></td>
+                        <td><a href="Files/2022 Annual Report.pdfpdf" target="pdf_viewer">2022 Annual Audit Report</a></td>
                     </tr>
                     <tr>
-                        <td><a href="sample2.pdf" target="pdf_viewer">Budget Breakdown</a></td>
+                        <td><a href="Files/PMR June 2023.pdf" target="pdf_viewer">Procurement Monitoring Report 2023</a></td>
                     </tr>
                     <tr>
-                        <td><a href="sample3.pdf" target="pdf_viewer">Transparency Policy</a></td>
+                        <td><a href="Files/PMR June 2024.pdf" target="pdf_viewer">Procurement Monitoring Report 2024<</a></td>
                     </tr>
                     <tr>
-                        <td><a href="sample4.pdf" target="pdf_viewer">Audit Summary</a></td>
+                        <td><a href="Files/PMR June 2025.pdf" target="pdf_viewer">Procurement Monitoring Report 2025</a></td>
                     </tr>
                 </tbody>
             </table>
