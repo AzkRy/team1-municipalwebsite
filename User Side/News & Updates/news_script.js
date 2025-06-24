@@ -1,27 +1,27 @@
 const newsData = [
   {
-    img: "../news7.jpg",
+    img: "../Img/news7.jpg",
     title: "Proclamation of Officials",
     date: "May 13, 2025",
     summary: "Opisyal nang naiproklama ng COMELEC Lucena sina Mayor Mark Don Victor Alcala at Vice Mayor Roderick Alcala bilang mga halal na Mayor at Vice Mayor ng lungsod ng Lucena.",
     link: "https://www.facebook.com/share/p/199cSTst7P/"
   },
   {
-    img: "../news8.jpg",
+    img: "../Img/news8.jpg",
     title: "Smile, DLL Grads!",
     date: "May 8, 2025",
     summary: "Free graduation pictorial for our DLL graduating students",
     link: "https://www.facebook.com/share/p/16CkuibqBS/"
   },
   {
-    img: "../news9.jpg",
+    img: "../Img/news9.jpg",
     title: "Grand Central Terminal",
     date: "April 16, 2025",
     summary: "TINGNAN: Ang kasalukuyang sitwasyon sa Lucena Grand Central Terminal ngayong alas 9 ng umaga, Miyerkules, Abril 16.",
     link: "https://quezon.gov.ph/ang-kasalukuyang-sitwasyon-sa-lucena-grand-central-terminal-april-16-2025/"
   },
   {
-    img: "../news10.jpg",
+    img: "../Img/news10.jpg",
     title: "Fire Olympics 2025",
     date: "March 14, 2025",
     summary: "Nagpasiklaban ang mga kalahok na Barangay at Industrial Community Fire Auxiliary Group (CFAG) sa idinaos na 3rd Kuya Mark Alcala Fire Olympics 2025 sa Lucena City Government Complex Grounds, March 14.",
