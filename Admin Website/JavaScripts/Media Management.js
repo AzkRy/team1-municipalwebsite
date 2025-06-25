@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
   flatpickr("#event_date", { dateFormat: "m-d-Y", allowInput: true, minDate: "today" });
 
   const announcementData = [
-    { image: 'User Side/Img/anc1.jpg', source: 'https://www.facebook.com/share/p/16UAAuzLS7/' },
-    { image: 'User Side/Img/anc2.jpg', source: 'https://www.facebook.com/share/1CAzvjwXAf/' },
-    { image: 'User Side/Img/anc3.jpg', source: 'https://www.facebook.com/share/p/16pCK3yrxK/' },
-    { image: 'User Side/Img/anc4.jpg', source: 'https://www.facebook.com/share/p/1BtPDJnNx7/' }
+    { image: '../User Side/Img/anc1.jpg', source: 'https://www.facebook.com/share/p/16UAAuzLS7/' },
+    { image: '../User Side/Img/anc2.jpg', source: 'https://www.facebook.com/share/1CAzvjwXAf/' },
+    { image: '../User Side/Img/anc3.jpg', source: 'https://www.facebook.com/share/p/16pCK3yrxK/' },
+    { image: '../User Side/Img/anc4.jpg', source: 'https://www.facebook.com/share/p/1BtPDJnNx7/' }
   ];
 
   const slidesContainer = document.getElementById('announcementSlides');

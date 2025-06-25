@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucena Health Appointment | Services</title>
+    <link rel="stylesheet" href="healthservice.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Roboto:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <header>
+      <div id="divLogo">
+        <img src="../Navigation Bar/img/lucena_city.png" class="logo" />
+        <h1 id="cityName">CITY OF LUCENA</h1>
+      </div>
+      <div class="tagline">
+        <img src="../Navigation Bar/img/boom-lucena.PNG" class="boomLucena" />
+      </div>
+    </header>
+
+    <div id="divNavigator">
+      <nav>
+        <ul class="sidebar" id="sidebar">
+          <li onclick="hideSidebar()">
+            <a href="#"><i class="fas fa-times"></i></a>
+          </li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../About Page/aboutpage.html">About Lucena</a></li>
+          <li>
+            <a href="../News & Updates/news_updates.html">News & Updates</a>
+          </li>
+          <li><a href="../Services/services.html">Services</a></li>
+          <li><a href="../Contact Page/Contact Page.html">Contacts Us</a></li>
+        </ul>
+        <ul>
+          <li class="hideOnDesktop" onclick="showSidebar()">
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </li>
+          <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+          <li class="hideOnMobile">
+            <a href="../About Page/aboutpage.html">About Lucena</a>
+          </li>
+          <li class="hideOnMobile">
+            <a href="../News & Updates/news_updates.html">News & Updates</a>
+          </li>
+          <li class="hideOnMobile">
+            <a href="../Services/services.html">Services</a>
+          </li>
+          <li class="hideOnMobile">
+            <a href="../Contact Page/Contact Page.html">Contacts Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="divSearch">
+        <input
+          type="search"
+          id="search"
+          name="fname"
+          value=""
+          placeholder="Search..."
+        />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h2>INSTRUCTIONS</h2>
+
+      <ol>
+        <li>Step 1: Fill up form</li>
+        <li>Step 2: Select type of service</li>
+        <li>Step 3: Note down the location shown</li>
+        <li>Step 4: Confirm if details are correct</li>
+        <li>Step 5: Wait for updates for the appointment</li>
+      </ol>
+    </div>
+
+    <!--HEALTH FORM-->
+    <form id="appointmentForm" action="confirmation.html" class="permit-form">
+      <h2 class="form-title">Health Appointment Request</h2>
+      <!-- Personal Info -->
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            required
+            pattern="^[A-Za-zÑñ\s\-']+$"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            required
+            pattern="^[A-Za-zÑñ\s\-']+$"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="middle-name"
+            >Middle Name <small>(N/A if none)</small></label
+          >
+          <input
+            type="text"
+            id="middle-name"
+            name="middle-name"
+            required
+            pattern="^[A-Za-zÑñ\s\-']+$"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" class="no-min-date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact Number</label>
+          <input
+            type="tel"
+            id="contact"
+            name="contact"
+            required
+            pattern="^[0-9]{11}$"
+            maxlength="11"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Sex</label>
+          <label
+            ><input type="radio" name="sex" value="male" required /> Male</label
+          >
+          <label
+            ><input type="radio" name="sex" value="female" required />
+            Female</label
+          >
+          <label
+            ><input type="radio" name="sex" value="other" required /> Prefer not
+            to say</label
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email-address">Email</label>
+          <input
+            type="email"
+            id="email-address"
+            name="email-address"
+            required
+          />
+        </div>
+
+        <div class="form-group full-width">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" required />
+        </div>
+      </div>
+
+      <!-- Appointment Info -->
+      <h4>APPOINTMENT DETAILS</h4>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="appointment-date">Preferred Appointment Date</label>
+          <input
+            type="date"
+            id="appointment-date"
+            name="appointment-date"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="appointment-time">Appointment Time</label>
+          <select id="appointment-time" name="appointment-time" required>
+            <option value="">Select a time</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="service-type">Type of Service</label>
+          <select id="service-type">
+            <option value="">-- Select --</option>
+            <option value="general">General Checkup</option>
+            <option value="dental">Dental</option>
+            <option value="prenatal">Prenatal</option>
+            <option value="pediatrics">Pediatrics</option>
+            <option value="mental">Mental</option>
+          </select>
+          <div
+            id="service-note"
+            style="margin-top: 10px; font-size: 14px; color: #333"
+          ></div>
+        </div>
+        <div class="form-group full-width">
+          <label for="reason">Reason for Appointment</label>
+          <textarea id="reason" name="reason" rows="4" required></textarea>
+        </div>
+      </div>
+
+      <!-- Health Info -->
+      <h4>HEALTH DETAILS</h4>
+      <div class="form-grid">
+        <div class="form-group full-width">
+          <label for="medical-history">Medical History</label>
+          <textarea
+            id="medical-history"
+            name="medical-history"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group full-width">
+          <label for="allergies">Allergies</label>
+          <textarea id="allergies" name="allergies" rows="2"></textarea>
+        </div>
+      </div>
+
+      <!-- Emergency Contact -->
+      <h4>EMERGENCY CONTACT</h4>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="emergency-name">Name</label>
+          <input
+            type="text"
+            id="emergency-name"
+            name="emergency-name"
+            required
+            pattern="^[A-Za-zÑñ\s\-']+$"
+          />
+        </div>
+        <div class="form-group">
+          <label for="emergency-contact">Contact Number</label>
+          <input
+            type="tel"
+            id="emergency-contact"
+            name="emergency-contact"
+            required
+            pattern="^[0-9]{11}$"
+            maxlength="11"
+          />
+        </div>
+      </div>
+
+      <!-- File Upload -->
+      <h4>ATTACHMENTS</h4>
+      <div class="form-group">
+        <label>Relevant Medical Records</label>
+        <div class="custom-upload">
+          <input
+            type="file"
+            name="relevant-med-records"
+            id="relevant-med-records"
+            class="file-hidden"
+            accept=".pdf,.jpg,.png"
+          />
+          <label for="relevant-med-records" class="file-button">Upload File</label>
+          <span class="file-name">No file selected</span>
+        </div>
+      </div>
+        <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+
+    <footer>
+      <div id="top_section">
+        <!-- Connect -->
+        <div id="connect">
+          <h3>CONNECT</h3>
+          <a
+            href="https://www.facebook.com/LucenaPIO"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M29.9998 3.33337H24.9998C22.7897 3.33337 20.6701 4.21135 19.1073 5.77415C17.5445 7.33695 16.6665 9.45657 16.6665 11.6667V16.6667H11.6665V23.3334H16.6665V36.6667H23.3332V23.3334H28.3332L29.9998 16.6667H23.3332V11.6667C23.3332 11.2247 23.5088 10.8008 23.8213 10.4882C24.1339 10.1756 24.5578 10 24.9998 10H29.9998V3.33337Z"
+                stroke="#F35B04"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a
+            a
+            href="mailto:CMOLucena@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M36.6668 9.99996C36.6668 8.16663 35.1668 6.66663 33.3335 6.66663H6.66683C4.8335 6.66663 3.3335 8.16663 3.3335 9.99996M36.6668 9.99996V30C36.6668 31.8333 35.1668 33.3333 33.3335 33.3333H6.66683C4.8335 33.3333 3.3335 31.8333 3.3335 30V9.99996M36.6668 9.99996L20.0002 21.6666L3.3335 9.99996"
+                stroke="#F35B04"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <p>
+            <a href="https://maps.app.goo.gl/ADefFCns9dx3cb37A">
+              City Government <br />
+              Complex 4301 Lucena, Philippines</a
+            >
+          </p>
+          <p>
+            <a href="mailto:CMOLucenaCity@yahoo.com">CMOLucenaCity@yahoo.com</a>
+          </p>
+          <p><a href="mailto:CMOLucena@gmail.com">CMOLucena@gmail.com</a></p>
+          <p>
+            <a href="tel:+63427882298">(042) 788-2298</a> <br />
+            <a href="tel:+63427882320">(042) 788-2320 loc. 174</a>
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div id="qLinks">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../About Page/aboutpage.html">About Lucena</a></li>
+            <li><a href="../About Page/aboutpage2.html">City Government</a></li>
+            <li>
+              <a href="../News & Updates/news_updates.html">News & Updates</a>
+            </li>
+            <li><a href="../Services/services.html">Services</a></li>
+            <li><a href="../Contact Page/Contact Page.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Government Links -->
+        <div id="gLinks">
+          <h3>Government Links</h3>
+          <ul>
+            <li>
+              <a href="https://op-proper.gov.ph/">Office of the President</a>
+            </li>
+            <li>
+              <a href="https://www.ovp.gov.ph/">Office of the Vice President</a>
+            </li>
+            <li>
+              <a href="https://www.senate.gov.ph/">Senate of the Philippines</a>
+            </li>
+            <li>
+              <a href="https://www.congress.gov.ph/"
+                >House of Representatives</a
+              >
+            </li>
+            <li><a href="https://sc.judiciary.gov.ph/">Supreme Court</a></li>
+            <li><a href="https://ca.judiciary.gov.ph/">Court of Appeals</a></li>
+            <li><a href="https://sb.judiciary.gov.ph/">Sandiganbayan</a></li>
+          </ul>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container">
+          <img
+            src="../Footer/phlogo.png"
+            alt="Republika ng Pilipinas Logo"
+            class="logo-img"
+          />
+          <div class="logo-text">
+            All the content is in the public domain unless otherwise stated.
+          </div>
+        </div>
+      </div>
+
+      <div id="bottom_section">
+        Copyright &copy; 2025. All Rights Reserved | Team 1
+      </div>
+    </footer>
+
+    <script src="healthservice.js" defer></script>
+  </body>
+</html>

@@ -35,7 +35,7 @@ include '../Navigation Bar/Navigation.php';
         <div class="sub-header">
             <h1>SERVICES</h1>
             <p class="breadcrumbs">
-                <a href="../Home/index.html">Home</a> &gt; <span><a href="../Services/services.php">Services</a></span>
+                <a href="../User Side/Home/index.php">Home</a> &gt; <span><a href="../Services/services.php">Services</a></span>
             </p>
         </div>
     </div>

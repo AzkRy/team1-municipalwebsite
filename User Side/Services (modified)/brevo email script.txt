@@ -1,0 +1,55 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Load PHPMailer classes
+require 'PHPMailer/Exception.php';
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+
+$emailSent = false;
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $name = $_POST['first-name'] ?? 'Citizen';
+    $email = $_POST['email-address'] ?? '';
+
+    if (!empty($email)) {
+        $mail = new PHPMailer(true);
+
+        try {
+            // SMTP config for Brevo
+            $mail->isSMTP();
+            $mail->Host       = 'smtp-relay.brevo.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = '905fcc001@smtp-brevo.com'; // your Brevo login
+            $mail->Password   = 'NvHKXskAbUxZMDnt';        // your secret SMTP key
+            $mail->SMTPSecure = 'tls';
+            $mail->Port       = 587;
+
+            // Email sender & receiver
+            $mail->setFrom('nathaniel.magpantay98+brevo@gmail.com', 'Lucena Permit Office');
+            $mail->addAddress($email, $name);
+
+            // Content
+            $mail->isHTML(true);
+            $mail->Subject = 'Your Permit Request is Being Processed';
+            $mail->Body    = "
+                Hello <strong>$name</strong>,<br><br>
+                Thank you for submitting your permit request. It is currently being reviewed.<br>
+                We'll notify you once there's an update.<br><br>
+                Regards,<br>
+                Lucena City Services
+            ";
+
+            $mail->send();
+            $emailSent = true;
+
+        } catch (Exception $e) {
+            $error = "Mailer Error: " . $mail->ErrorInfo;
+        }
+    } else {
+        $error = "Missing email address.";
+    }
+}
+?>

@@ -1,3 +1,14 @@
+<?php
+include '../User Side/database/database.php';
+session_start();
+
+if (!isset($_SESSION['um_id']) || !isset($_SESSION['role'])) {
+  header("Location: ../Admin Website/Log In.php");
+  exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +18,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="./CSS/Home.css">
+    <link rel="stylesheet" href="../Admin Website/CSS/Home.css">
+
+    <link rel="stylesheet" href="../Admin Website/CSS/Navigation Bar.css">
 </head>
 <body>
-    <?php include 'Navigation Bar.php';  ?>
+    <?php include '../Admin Website/Navigation Bar.php';  ?>
     <main class="container">
         <section class="card dashboard-card">
             <h2>SERVICES ONLINE APPLICATIONS</h2>
@@ -57,6 +70,6 @@
 
     <!-- Link to your external JavaScript file -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="./JavaScripts/Home.js"></script>
+    <script src="../Admin Website/JavaScripts/Home.js"></script>
 </body>
 </html>

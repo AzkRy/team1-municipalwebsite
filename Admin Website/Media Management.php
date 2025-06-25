@@ -126,7 +126,7 @@ $canEditMedia = $isSuperAdmin || $isMediaOfficer;
       <div id="headlineGallery" style="display: none;">
 
         <div class="headline_section">
-          <img class="headline-img" src="User Side/Img/headline.jpg" alt="Headline Image">
+          <img class="headline-img" src="../User Side/Img/headline.jpg" alt="Headline Image">
           <div class="headline_content">
             <div class="headline-header">
               <h3 class="news-title">
@@ -147,7 +147,7 @@ $canEditMedia = $isSuperAdmin || $isMediaOfficer;
       <div id="latestGallery" style="display: none;">
         <div class="news-scroll-wrapper">
           <article class="news-article">
-            <img src="User Side/Img/news5.jpg" alt="News image">
+            <img src="../User Side/Img/news5.jpg" alt="News image">
             <div class="news-content">
               <div class="news-title">
                 <span class="title-text">Tagumpay ng Quezonian</span>
@@ -164,7 +164,7 @@ $canEditMedia = $isSuperAdmin || $isMediaOfficer;
           </article>
 
           <article class="news-article">
-            <img src="User Side/Img/news5.jpg" alt="News image">
+            <img src="../User Side/Img/news6.jpg" alt="News image">
             <div class="news-content">
               <div class="news-title">
                 <span class="title-text">Summer Job Fair</span>
@@ -180,7 +180,7 @@ $canEditMedia = $isSuperAdmin || $isMediaOfficer;
             <?php endif; ?>
           </article>
           <article class="news-article">
-            <img src="User Side/Img/news5.jpg" alt="News image">
+            <img src="../User Side/Img/news7.jpg" alt="News image">
             <div class="news-content">
               <div class="news-title">
                 <span class="title-text">Veterinary Medical Mission</span>
@@ -199,7 +199,7 @@ $canEditMedia = $isSuperAdmin || $isMediaOfficer;
           </article>
 
           <article class="news-article">
-            <img src="User Side/Img/news5.jpg" alt="News image">
+            <img src="../User Side/Img/news8.jpg" alt="News image">
             <div class="news-content">
               <div class="news-title">
                 <span class="title-text">Proclamation of Officials</span>

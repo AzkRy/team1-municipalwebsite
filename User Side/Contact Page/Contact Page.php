@@ -1,6 +1,8 @@
 <?php
 include '../database/database.php';
 
+$showThankYou = false;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $name = $_POST['name'];
     $type = $_POST['type'];
@@ -12,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $stmt->bind_param("ssss", $name, $type, $subject, $message);
     $stmt->execute();
     $stmt->close();
+
+    $showThankYou = true;
 }
 ?>
 
@@ -31,6 +35,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 </head>
 <body>
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+        <div style="background:#fff; padding:30px 40px; border-radius:8px; text-align:center; max-width:90vw;">
+            <h2 style="font-size: 32px; color:var(--accent-color);">Thank You!</h2>
+            <p style="font-family: 'Archivo', san-serif; font-size: 16px; margin-top: 32px; margin-bottom: 32px;">Your feedback or Inqury has been submitted! <br>Thank You for time.</p>
+            <button onclick="closeThankYouModal()" 
+            style="margin-top:15px; 
+            padding:8px 20px; 
+            color:var(--section-color);
+            background:var(--button-color);
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+            width:150px;
+            font-size:20px;
+            font-weight:bold;
+            transition: background 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Roboto', sans-serif;
+            ">
+            Close</button>
+        </div>
+    </div>
      <header>
         <div id="divLogo">
             <img src="../Navigation Bar/img/lucena_city.png" class="logo"> 
@@ -118,7 +145,17 @@ include '../Navigation Bar/Navigation.php';
     </section>
 
     <script src="../Navigation Bar/navigation.js"></script>
-
+    <script>
+    function closeThankYouModal() {
+        document.getElementById('thankYouModal').style.display = 'none';
+    }
+    <?php if ($showThankYou): ?>
+        // Show the modal after form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('thankYouModal').style.display = 'flex';
+        });
+    <?php endif; ?>
+    </script>
     <?php 
     include '../Footer/Footer.php';
     ?>

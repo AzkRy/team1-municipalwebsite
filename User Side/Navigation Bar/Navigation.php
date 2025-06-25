@@ -14,7 +14,7 @@
                     <li class="hideOnDesktop" onclick=showSidebar()><a href="#"><i class="fas fa-bars"></i></a></li>
                     <li class="hideOnMobile"><a href="../Home/index.php">Home</a></li>
                     <li class="hideOnMobile"><a href="../About Page/about.php">About Lucena</a></li>
-                    <li class="hideOnMobile"><a href="../Services/services.php">Services</a></li>
+                    <li class="hideOnMobile"><a href="../Services (modified)/services.php">Services</a></li>
                     <li class="hideOnMobile"><a href="../News & Updates/News Page.php">News & Updates</a></li>
                     <li class="hideOnMobile"><a href="../Tourism Page/tourism.php">Tourism</a></li>
                     <li class="hideOnMobile"><a href="../Transparency Page/transparency.php">Page Trasparency</a></li>

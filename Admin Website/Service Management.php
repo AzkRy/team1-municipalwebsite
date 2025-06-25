@@ -31,6 +31,7 @@ $canEditMedia = $isSuperAdmin || $isServiceOfficer;
         <div class="tabs-nav">
             <div class="tab-button active" onclick="showTab('permits', this)">PERMITS</div>
             <div class="tab-button" onclick="showTab('healthService', this)">HEALTH SERVICES</div>
+            <div class="tab-button" onclick="showTab('taxClearance', this)">TAX CLEARANCE</div>
         </div>
 
         <div class="tabs-content">
@@ -205,7 +206,7 @@ $canEditMedia = $isSuperAdmin || $isServiceOfficer;
                     <th>Heath Service Type</th>
                     <th>Last Name</th>
                     <th>First Name</th>
-                    <th>Middle Name</th>
+                    <th>Email</th>
                     <th>Status</th>
                     <th>Submitted Form</th>
                 </thead>
@@ -215,7 +216,7 @@ $canEditMedia = $isSuperAdmin || $isServiceOfficer;
                             <td>Vaccination</td>
                             <td>Dela Vega</td>
                             <td>Juan</td>
-                            <td>Seib Mor</td>
+                            <td>juan@gmail.com</td>
                             <td>
                                 <?php if ($canEditMedia): ?>
                                 <select name="status" id="status">
@@ -237,7 +238,7 @@ $canEditMedia = $isSuperAdmin || $isServiceOfficer;
                             <td>Consultation</td>
                             <td>San Juan</td>
                             <td>Jose</td>
-                            <td>Marie Mor</td>
+                            <td>jose@gmail.com</td>
                             <td>
                                 <?php if ($canEditMedia): ?>
                                 <select name="status" id="status">
@@ -259,7 +260,7 @@ $canEditMedia = $isSuperAdmin || $isServiceOfficer;
                             <td>Check-Up</td>
                             <td>San Jose</td>
                             <td>Del</td>
-                            <td>Monte</td>
+                            <td>del@gmail.com</td>
                             <td>
                                 <?php if ($canEditMedia): ?>
                                 <select name="status" id="status">
@@ -281,7 +282,7 @@ $canEditMedia = $isSuperAdmin || $isServiceOfficer;
                             <td>Check-Up</td>
                             <td>San Miguel</td>
                             <td>Dell</td>
-                            <td>Hp</td>
+                            <td>sanmiguel@gmail.com</td>
                             <td>
                                 <?php if ($canEditMedia): ?>
                                 <select name="status" id="status">
@@ -301,6 +302,135 @@ $canEditMedia = $isSuperAdmin || $isServiceOfficer;
                 </table>
             </div>
         </div>
+
+            <div id="taxClearance" class="tab-content">
+                <div class="cards-container">
+                    <div class="permit-card approved">
+                        <div class="permit-card-title">APPROVED</div>
+                        <div class="permit-card-count">50</div>
+                    </div>
+                    <div class="permit-card pending">
+                        <div class="permit-card-title">PENDING</div>
+                        <div class="permit-card-count">25</div>
+                    </div>
+                    <div class="permit-card rejected">
+                        <div class="permit-card-title">REJECTED</div>
+                        <div class="permit-card-count">15</div>
+                    </div>
+                    <div class="permit-card total">
+                        <div class="permit-card-title">TOTAL</div>
+                        <div class="permit-card-count">90</div>
+                    </div>
+                </div>
+            
+            <div class="permit-table-section">
+            <div class="permit-table-header">
+                <span class="permit-table-title">TAX CLEARANCE</span>
+                <div class="permit-table-controls">
+                    <span>Sort</span>
+                    <select>
+                        <option>Newest</option>
+                        <option>Oldest</option>
+                    </select>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <th>Tax Clearance Code</th>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>email</th>
+                    <th>Status</th>
+                    <th>Submitted Form</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HS-7854</td>
+                        <td>Dela Vega</td>
+                        <td>Juan</td>
+                        <td>juandelacurz@gmail.com</td>
+                        <td>
+                            <?php if ($canEditMedia): ?>
+                            <select name="status" id="status">
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                            </select>
+                            <?php else: ?>
+                            <span>Pending</span>
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <button id="viewForm" class="view-form">View Form</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>HS-9568</td>
+                        <td>San Juan</td>
+                        <td>Jose</td>
+                        <td>jose@gmail.com</td>
+                        <td>
+                            <?php if ($canEditMedia): ?>
+                            <select name="status" id="status">
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                            </select>
+                            <?php else: ?>
+                            <span>Pending</span>
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <button id="viewForm" class="view-form">View Form</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>HS-5846</td>
+                        <td>San Jose</td>
+                        <td>Del</td>
+                        <td>sanjosedel@gmail.com</td>
+                        <td>
+                            <?php if ($canEditMedia): ?>
+                            <select name="status" id="status">
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                            </select>
+                            <?php else: ?>
+                            <span>Pending</span>
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <button id="viewForm" class="view-form">View Form</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>HS-4523</td>
+                        <td>San Miguel</td>
+                        <td>Dell</td>
+                        <td>Hp@gmail.com</td>
+                        <td>
+                            <?php if ($canEditMedia): ?>
+                            <select name="status" id="status">
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                            </select>
+                            <?php else: ?>
+                            <span>Pending</span>
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <button id="viewForm" class="view-form">View Form</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     </div>
 
         <script src="../Admin Website/JavaScripts/Service Management.js"></script>

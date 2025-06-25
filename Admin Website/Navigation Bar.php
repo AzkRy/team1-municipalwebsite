@@ -40,16 +40,12 @@
 
         <div class="sidebar-content">
             <nav class="nav-menu">
-                <a href="#" class="nav-item" data-page="media">
+                <a href="Home.php" class="nav-item" data-page="media">
                     <span>Home</span>
                 </a>
 
                 <a href="../Admin Website/Media Management.php" class="nav-item" data-page="media">
                     <span>Media Management</span>
-                </a>
-
-                <a href="#" class="nav-item" data-page="city-info">
-                    <span>City Information</span>
                 </a>
 
                 <a href="../Admin Website/Service Management.php" class="nav-item" data-page="services">
