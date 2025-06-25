@@ -11,10 +11,6 @@ $isSuperAdmin = ($_SESSION['role'] === 'Super Admin');
 $isFeedbackOfficer = ($_SESSION['role'] === 'Feedback Officer');
 $canEditMedia = $isSuperAdmin || $isFeedbackOfficer;
 
-if (!$canEditMedia) {
-    echo "<h2 style='color:red; text-align:center; margin-top:50px;'>Access Denied: You do not have permission to view this page.</h2>";
-    exit();
-}
 
 // Fetch feedback and inquiries from database
 $feedbacks = [];

@@ -72,6 +72,8 @@ $canEditMedia = $isSuperAdmin || $isTransparencyOfficer;
                     <button class="edit-btn">&#9998;</button>
                     <button class="delete-btn" data-type="announcement">&times;</button>
                     <?php endif; ?>
+                </div>
+
                 <div class="document_area">
                     <a class="document_title" href="../User Side/Files/PMR June 2025.pdf" target="_blank" style="color: black; text-decoration: underline;">Procurement Monitoring Report 2025</a>
                     <?php if ($canEditMedia): ?>

@@ -23,7 +23,7 @@ if (isset($_POST['first_name'], $_POST['last_name'], $_POST['employee_num'], $_P
             $_SESSION['role'] = $user['role'];
             $_SESSION['first_name'] = $user['first_name'];
             $_SESSION['last_name'] = $user['last_name'];
-            header("Location: Media Management.php");
+            header("Location: Home.php");
             exit();
         } else {
             $error = "Invalid password. Please try again.";
