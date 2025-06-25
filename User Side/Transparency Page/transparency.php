@@ -27,7 +27,7 @@
   </header>
 
   <?php
-  include 'navigation.php';
+  include '../Navigation Bar/Navigation.php';
   ?>
 
   <section class="headline_section">
@@ -54,7 +54,7 @@
             <td><a href="../Files/PMR June 2023.pdf" target="pdf_viewer">Procurement Monitoring Report 2023</a></td>
           </tr>
           <tr>
-            <td><a href="../Files/PMR June 2024.pdf" target="pdf_viewer">Procurement Monitoring Report 2024<</a></td>
+            <td><a href="../Files/PMR June 2024.pdf" target="pdf_viewer">Procurement Monitoring Report 2024</a></td>
           </tr>
           <tr>
             <td><a href="../Files/PMR June 2025.pdf" target="pdf_viewer">Procurement Monitoring Report 2025</a></td>

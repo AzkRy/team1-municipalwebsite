@@ -35,7 +35,7 @@ if (isset($_POST['first_name'], $_POST['last_name'], $_POST['employee_num'], $_P
     $stmt->close();
     $conn->close();
 
-    include 'Terms-Privacy.php';
+    include '../Admin Website/Terms-Privacy.php';
 } 
 ?>
 

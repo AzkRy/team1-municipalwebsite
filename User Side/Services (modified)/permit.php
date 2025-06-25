@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../Services (modified)/PHPMailer/PHPMailer.php';
-require '../Services (modified)/PHPMailer/SMTP.php';
-require '../Services (modified)/PHPMailer/Exception.php';
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
 
 $emailSent = false;
 
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Permit Application | Services</title>
-    <link rel="stylesheet" href="../Services (modified)/permits.css" />
+    <link rel="stylesheet" href="permits.css" />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Roboto:wght@500;600;700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="../Navigation Bar/navigation.css">
     <link rel="stylesheet" href="../Footer/footer_styles.css">
-    <script src="../Services (modified)/modalpopup.js" defer></script>
+    <script src="modalpopup.js" defer></script>
 </head>
 
   <body>
@@ -764,7 +764,6 @@ include '../Navigation Bar/Navigation.php';
       class="permit-form"
       method = "POST"
       action=""
-      enctype="multipart/form-data"
       style="display: none"
     >
       <h2 class="form-title">Event Permit</h2>
@@ -1062,13 +1061,13 @@ include '../Navigation Bar/Navigation.php';
           <div class="custom-upload">
             <input
               type="file"
-              name="barangay-clearance"
-              id="barangay-clearance"
+              name="event-barangay-clearance"
+              id="event-barangay-clearance"
               class="file-hidden"
               accept=".pdf,.jpg,.png"
               required
             />
-            <label for="barangay-clearance" class="file-button"
+            <label for="event-barangay-clearance" class="file-button"
               >Upload File</label
             >
             <span class="file-name">No file selected</span>
@@ -1252,7 +1251,6 @@ include '../Navigation Bar/Navigation.php';
       class="permit-form"
       method ="POST"
       action=""
-      enctype="multipart/form-data"
       style="display: none"
     >
       <h2 class="form-title">Business Permit</h2>
@@ -1583,13 +1581,13 @@ include '../Navigation Bar/Navigation.php';
           <div class="custom-upload">
             <input
               type="file"
-              name="zoning-clearance"
-              id="zoning-clearance"
+              name="business-zoning-clearance"
+              id="business-zoning-clearance"
               class="file-hidden"
               accept=".pdf,.jpg,.png"
               required
             />
-            <label for="zoning-clearance" class="file-button"
+            <label for="business-zoning-clearance" class="file-button"
               >Upload File</label
             >
             <span class="file-name">No file selected</span>
@@ -1993,13 +1991,13 @@ include '../Navigation Bar/Navigation.php';
           <div class="custom-upload">
             <input
               type="file"
-              name="barangay-clearance"
-              id="barangay-clearance"
+              name="transport-barangay-clearance"
+              id="transport-barangay-clearance"
               class="file-hidden"
               accept=".pdf,.jpg,.png"
               required
             />
-            <label for="barangay-clearance" class="file-button"
+            <label for="transport-barangay-clearance" class="file-button"
               >Upload File</label
             >
             <span class="file-name">No file selected</span>
@@ -2067,13 +2065,13 @@ include '../Navigation Bar/Navigation.php';
           <div class="custom-upload">
             <input
               type="file"
-              name="zoning-clearance"
-              id="zoning-clearance"
+              name="transport-zoning-clearance"
+              id="transport-zoning-clearance"
               class="file-hidden"
               accept=".pdf,.jpg,.png"
               required
             />
-            <label for="zoning-clearance" class="file-button"
+            <label for="transport-zoning-clearance" class="file-button"
               >Upload File</label
             >
             <span class="file-name">No file selected</span>
@@ -2174,7 +2172,7 @@ include '../Navigation Bar/Navigation.php';
       </button>
     </form>
 
-    <script src="../Services (modified)/permit.js" defer></script>
+    <script src="permit.js" defer></script>
     <script src="../Navigation Bar/navigation.js"></script>
 
     <?php 
