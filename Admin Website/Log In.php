@@ -2,8 +2,6 @@
 include '../User Side/database/database.php';
 session_start();
 
-// hello world
-
 $error = ""; // Initialize error variable
 
 if (isset($_POST['first_name'], $_POST['last_name'], $_POST['employee_num'], $_POST['password'])) {
