@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transparency | Lucena</title>
+    <title>Contact Us | Lucena</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -63,10 +63,30 @@
       </table>
     </section>
 
-    <section class="document_area">
-      <iframe name="pdf_viewer" src="sample1.pdf" width="100%" height="600px" style="border: none;"></iframe>
-    </section>
-  </div>
+    <div class="bottom_section">
+        <section class="trans_nav">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Navigation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href=".../Files/2022 Annual Report.pdf" target="pdf_viewer">2022 Annual Audit Report</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=".../Files/PMR June 2023.pdf" target="pdf_viewer">Procurement Monitoring Report 2023</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=".../Files/PMR June 2024.pdf" target="pdf_viewer">Procurement Monitoring Report 2024<</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=".../Files/PMR June 2025.pdf" target="pdf_viewer">Procurement Monitoring Report 2025</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
    <script src="../Navigation Bar/navigation.js"></script>
     <?php
